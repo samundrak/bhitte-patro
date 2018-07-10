@@ -20,7 +20,19 @@ class Week extends Component {
     return (
       <Row>
         {Week.WEEK_NAMES[this.props.short ? 'SHORT' : 'LONG'].map((weekDay) => (
-          <Col span={3}>{weekDay}</Col>
+          <Col
+            span={3}
+            style={{
+              borderWidth: '1px',
+              height: '70px',
+              margin: '0px',
+              textAlign: 'center',
+              borderStyle: 'solid',
+              lineHeight: '70px',
+            }}
+          >
+            {weekDay}
+          </Col>
         ))}
       </Row>
     );

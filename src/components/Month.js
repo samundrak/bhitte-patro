@@ -7,7 +7,7 @@ class Month extends React.Component {
   render() {
     return (
       <Row>
-        <Week short />
+        <Week />
         <Days />
       </Row>
     );

@@ -1,34 +1,24 @@
 import React, { Component, Fragment } from 'react';
 import Proptypes from 'prop-types';
 import { Row, Col } from 'antd';
+import calendar from '../data/calendar';
 
+const { week } = calendar;
 class Week extends Component {
-  static WEEK_NAMES = {
-    SHORT: ['आईत', 'सोम', 'मंगल', 'बुध', 'बिही', 'शुक्', 'शनि'],
-    LONG: [
-      'आईतवार',
-      'सोमवार',
-      'मंगलवार',
-      'बुधवार',
-      'बिहीवार',
-      'शुक्रवार',
-      'शनिवार',
-    ],
-  };
   static TOTAL_DAYS = 7;
   render() {
     return (
       <Row>
-        {Week.WEEK_NAMES[this.props.short ? 'SHORT' : 'LONG'].map((weekDay) => (
+        {week.np[this.props.short ? 'short' : 'long'].map((weekDay) => (
           <Col
             span={3}
             style={{
-              borderWidth: '1px',
-              height: '70px',
+              borderWidth: '3px',
+              height: '50px',
               margin: '0px',
               textAlign: 'center',
               borderStyle: 'solid',
-              lineHeight: '70px',
+              lineHeight: '50px',
             }}
           >
             {weekDay}

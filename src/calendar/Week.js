@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row } from 'antd';
+import PropTypes from 'prop-types';
 import Day from './Day';
 
 class Week extends Component {
@@ -7,11 +8,15 @@ class Week extends Component {
   render() {
     return (
       <Row>
-        {Week.DAYS_COUNT.map((item, index) => {
-          return <Day day={index} />;
-        })}
+        {this.props.data.map((day, index) => <Day day={day} index={index} />)}
       </Row>
     );
   }
 }
+Week.defaultProps = {
+  data: [],
+};
+Week.propTypes = {
+  data: PropTypes.array.isRequired,
+};
 export default Week;

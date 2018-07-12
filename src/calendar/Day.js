@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Col } from 'antd';
+import PropTypes from 'prop-types';
 import { replaceNumberWithAnka } from '../utils';
 
 class Day extends Component {
@@ -16,13 +17,16 @@ class Day extends Component {
         }}
         span={3}
       >
-        {replaceNumberWithAnka(1020)}
+        {replaceNumberWithAnka(this.props.day.number)}
       </Col>
     );
   }
 }
 
 Day.defaultProps = {
-  day: 30,
+  day: {},
+};
+Day.propTypes = {
+  daya: PropTypes.object.isRequired,
 };
 export default Day;

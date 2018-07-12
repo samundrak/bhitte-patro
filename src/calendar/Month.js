@@ -12,7 +12,7 @@ class Month extends React.Component {
           <Col span={24}>{this.props.name}</Col>
         </Row>
         <WeekHeader />
-        <Weeks days={this.props.weekStart} totalDays={this.props.totalDays} />
+        <Weeks weekStart={this.props.weekStart} totalDays={this.props.totalDays} />
       </Row>
     );
   }

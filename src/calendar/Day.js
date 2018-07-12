@@ -14,6 +14,7 @@ class Day extends Component {
           textAlign: 'center',
           borderStyle: 'solid',
           lineHeight: '70px',
+          borderColor: '#e8e8e8',
         }}
         span={3}
       >

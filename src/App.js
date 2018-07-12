@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import YearView from './views/Year';
 import 'antd/dist/antd.css';
 import './App.css';
@@ -10,12 +12,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Layout>
-          <YearView value={data[year]} year={year} />
+        <Layout app={this.props.app} domex={this.props.domex}>
+          <YearView
+            key={this.props.app.cursorYear}
+            value={data[this.props.app.cursorYear]}
+            year={this.props.app.cursorYear}
+          />
         </Layout>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  app: state.app,
+});
+export default connect(mapStateToProps)(App);

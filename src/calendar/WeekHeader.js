@@ -18,6 +18,7 @@ class Week extends Component {
               margin: '0px',
               textAlign: 'center',
               borderStyle: 'solid',
+              borderColor: '#e8e8e8',
               lineHeight: '50px',
             }}
           >

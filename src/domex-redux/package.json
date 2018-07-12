@@ -1,0 +1,40 @@
+{
+  "_from": "git+https://github.com/samundrak/domex-redux.git",
+  "_id": "domex-redux@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/domex-redux",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "domex-redux@https://github.com/samundrak/domex-redux.git",
+    "name": "domex-redux",
+    "escapedName": "domex-redux",
+    "rawSpec": "https://github.com/samundrak/domex-redux.git",
+    "saveSpec": "git+https://github.com/samundrak/domex-redux.git",
+    "fetchSpec": "https://github.com/samundrak/domex-redux.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/samundrak/domex-redux.git#3d5f51ef533f9b393ae662d7b2259f1da908d2eb",
+  "_spec": "domex-redux@https://github.com/samundrak/domex-redux.git",
+  "_where": "/home/samundrak/projects/bhitte-patro",
+  "author": "",
+  "bundleDependencies": false,
+  "dependencies": {
+    "redux": "^4.0.0"
+  },
+  "deprecated": false,
+  "description": "Abstraction over redux's actions and reducers using domex.",
+  "keywords": [],
+  "license": "ISC",
+  "main": "src/DomexRedux.js",
+  "name": "domex-redux",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

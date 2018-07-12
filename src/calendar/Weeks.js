@@ -12,7 +12,7 @@ class Weeks extends React.Component {
       totalDays: 30,
     };
   }
-  createBeautifullMonth(weekStart, totalDays) {
+  createBeautifullWeeks(weekStart, totalDays) {
     const days = Array(weekStart)
       .fill({ isDay: false })
       .concat(
@@ -34,7 +34,7 @@ class Weeks extends React.Component {
   }
   componentDidMount() {
     this.setState({
-      weeks: this.createBeautifullMonth(
+      weeks: this.createBeautifullWeeks(
         this.props.weekStart,
         this.props.totalDays
       ),

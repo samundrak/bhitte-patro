@@ -9,9 +9,8 @@ class Year extends React.Component {
   render() {
     return (
       <Row>
-        {this.props.year}
         {Year.MONTHS.long.map((name, index) => (
-          <Col span={24}>
+          <Col span={5}>
             <Month
               name={name}
               weekStart={this.props.value[index][0]}

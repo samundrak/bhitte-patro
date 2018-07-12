@@ -1,0 +1,43 @@
+{
+  "_from": "git+https://github.com/samundrak/domex.git",
+  "_id": "domex@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/domex",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "domex@https://github.com/samundrak/domex.git",
+    "name": "domex",
+    "escapedName": "domex",
+    "rawSpec": "https://github.com/samundrak/domex.git",
+    "saveSpec": "git+https://github.com/samundrak/domex.git",
+    "fetchSpec": "https://github.com/samundrak/domex.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/samundrak/domex.git#70f3aea4ac60b4218be40c43cb73630ff956c1a8",
+  "_spec": "domex@https://github.com/samundrak/domex.git",
+  "_where": "/home/samundrak/projects/bhitte-patro",
+  "author": {
+    "name": "Samundra khatri"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Browser base implementation of express.js",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^23.3.0"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "src/index.js",
+  "name": "domex",
+  "scripts": {
+    "test": "jest"
+  },
+  "version": "1.0.0"
+}

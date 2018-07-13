@@ -9,13 +9,14 @@ import domex from '../store';
 class Calendar extends React.Component {
   renderCalendarView() {
     const view = this.props.app.calendarView;
+    const cursorYear = this.props.app.cursor.year;
     switch (view) {
       case CALENDAR_VIEW_TYPE.YEAR.value:
         return (
           <YearView
-            key={this.props.app.cursorYear}
-            value={data[this.props.app.cursorYear]}
-            year={this.props.app.cursorYear}
+            key={cursorYear}
+            value={data[cursorYear]}
+            year={cursorYear}
           />
         );
       case CALENDAR_VIEW_TYPE.MONTH.value:

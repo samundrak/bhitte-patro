@@ -24,15 +24,15 @@ class SimpleLayout extends React.Component {
   handleChangeYearCursor(step) {
     return value => {
       let year = null;
-      const cursor = this.props.app.cursorYear;
+      const cursor = this.props.app.cursor.year;
       if (!step) {
-        year = value;
+        year = parseInt(value);
       }
       if (step === '+' && cursor < YEAR_RANGE_NEPALI[1]) {
-        year = cursor + 1;
+        year = parseInt(cursor) + 1;
       }
       if (step === '-' && cursor > YEAR_RANGE_NEPALI[0]) {
-        year = cursor - 1;
+        year = parseInt(cursor) - 1;
       }
       this.changeCursorYear(year);
     };

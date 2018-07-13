@@ -9,6 +9,8 @@ export default {
   currentYear: 2075,
   cursorYear: 2075,
   current: {},
-  cursor: {},
+  cursor: {
+    year: 2075,
+  },
   calendarView: CALENDAR_VIEW_TYPE.YEAR.value,
 };

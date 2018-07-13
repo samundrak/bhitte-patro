@@ -7,6 +7,8 @@ export default function(router) {
       return { calendarView: req.body.view };
     })
     .post('/change_cursor', async req => {
-      return { cursor: req.body.date };
+      const date = { ...req.body.date };
+      date.year = parseInt(date.year);
+      return { cursor: date };
     });
 }

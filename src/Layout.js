@@ -105,7 +105,7 @@ class SimpleLayout extends React.Component {
         onChange={this.handleChangeYearCursor()}
       >
         {Object.keys(months).map(key => (
-          <Option value={key} key={key}>
+          <Option value={parseInt(key)} key={key}>
             {months[parseInt(key) - 1]}
           </Option>
         ))}

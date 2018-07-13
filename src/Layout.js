@@ -3,6 +3,7 @@ import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from './store/state';
 import { Layout, Menu, Icon, Select, Row, Col, Button } from 'antd';
 import { replaceNumberWithAnka } from './utils';
 
+import { withRouter } from 'react-router';
 const Option = Select.Option;
 
 const { Header, Sider, Content } = Layout;
@@ -21,7 +22,7 @@ class SimpleLayout extends React.Component {
     });
   };
   handleChangeYearCursor(step) {
-    return (value) => {
+    return value => {
       let year = null;
       const cursor = this.props.app.cursorYear;
       if (!step) {
@@ -38,7 +39,31 @@ class SimpleLayout extends React.Component {
   }
 
   changeCursorYear(year) {
-    this.props.domex.resource.post('/change_year_cursor', { data: { year } });
+    const {
+      calendarView: view,
+      cursor: { month, day },
+    } = this.props.app;
+    this.props.domex.resource.post('/change_cursor', {
+      data: {
+        date: {
+          year,
+          month,
+          day,
+        },
+      },
+    });
+    const route = `/calendar/view/${view}/${year}/${month}/${day}`;
+    this.props.history.push(route);
+  }
+  handleChangeCalendarView() {
+    return view => {
+      const { year, month, day } = this.props.app.cursor;
+      const route = `/calendar/view/${view}/${year}/${month}/${day}`;
+      this.props.history.push(route);
+      this.props.domex.resource.post('/change_calendar_view', {
+        data: { view },
+      });
+    };
   }
   render() {
     return (
@@ -91,20 +116,31 @@ class SimpleLayout extends React.Component {
                 </Button>
                 &nbsp;
                 <Select
-                  value={this.props.app.cursorYear}
+                  value={this.props.app.cursor.year}
                   showSearch
                   style={{ width: 120 }}
                   onChange={this.handleChangeYearCursor()}
                 >
-                  {years.map((item) => (
-                    <Option value={item.yr}>{item.local}</Option>
+                  {years.map(item => (
+                    <Option value={item.yr} key={item.yr}>
+                      {item.local}
+                    </Option>
                   ))}
                 </Select>
               </Col>
               <Col span={3}>
-                <Select defaultValue="YEAR" style={{ width: 120 }}>
-                  {Object.keys(CALENDAR_VIEW_TYPE).map((item) => (
-                    <Option value={item}>{item}</Option>
+                <Select
+                  value={this.props.app.calendarView}
+                  style={{ width: 120 }}
+                  onChange={this.handleChangeCalendarView()}
+                >
+                  {Object.keys(CALENDAR_VIEW_TYPE).map(item => (
+                    <Option
+                      value={CALENDAR_VIEW_TYPE[item].value}
+                      key={CALENDAR_VIEW_TYPE[item].value}
+                    >
+                      {CALENDAR_VIEW_TYPE[item].np}
+                    </Option>
                   ))}
                 </Select>
               </Col>
@@ -127,4 +163,4 @@ class SimpleLayout extends React.Component {
     );
   }
 }
-export default SimpleLayout;
+export default withRouter(SimpleLayout);

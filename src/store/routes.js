@@ -3,14 +3,10 @@ export default function(router) {
     .post('/change_year_cursor', async (req, res) => {
       return { cursorYear: req.body.year };
     })
-    .patch('/todo', async (req) => {
-      const todo = [].concat(req.state.app.todo);
-      todo[req.body.index].value = req.body.value;
-      return { todo };
+    .post('/change_calendar_view', async req => {
+      return { calendarView: req.body.view };
     })
-    .delete('/todo', async (req) => {
-      const todo = [].concat(req.state.app.todo);
-      todo.splice(req.body.index, 1);
-      return { todo };
+    .post('/change_cursor', async req => {
+      return { cursor: req.body.date };
     });
 }

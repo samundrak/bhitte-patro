@@ -1,8 +1,9 @@
 import React from 'react';
+import renderIf from 'render-if';
 import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from './store/state';
 import { Layout, Menu, Icon, Select, Row, Col, Button } from 'antd';
 import { replaceNumberWithAnka } from './utils';
-
+import calendar from './data/calendar';
 import { withRouter } from 'react-router';
 const Option = Select.Option;
 
@@ -23,26 +24,41 @@ class SimpleLayout extends React.Component {
   };
   handleChangeYearCursor(step) {
     return value => {
-      let year = null;
-      const cursor = this.props.app.cursor.year;
+      let { year, month, day } = this.props.app.cursor;
+      const calendarView = this.props.app.calendarView;
       if (!step) {
         year = parseInt(value);
       }
-      if (step === '+' && cursor < YEAR_RANGE_NEPALI[1]) {
-        year = parseInt(cursor) + 1;
+      if (step === '+') {
+        switch (calendarView) {
+          case CALENDAR_VIEW_TYPE.YEAR.value:
+            if (year < YEAR_RANGE_NEPALI[1]) {
+              year = parseInt(year) + 1;
+            }
+            break;
+          case CALENDAR_VIEW_TYPE.MONTH.value:
+            month = parseInt(month) + 1;
+            break;
+        }
       }
-      if (step === '-' && cursor > YEAR_RANGE_NEPALI[0]) {
-        year = parseInt(cursor) - 1;
+      if (step === '-') {
+        switch (calendarView) {
+          case CALENDAR_VIEW_TYPE.YEAR.value:
+            if (year > YEAR_RANGE_NEPALI[0]) {
+              year = parseInt(year) - 1;
+            }
+            break;
+          case CALENDAR_VIEW_TYPE.MONTH.value:
+            month = parseInt(month) - 1;
+            break;
+        }
       }
-      this.changeCursorYear(year);
+      this.changeCursorYear({ year, month, day });
     };
   }
 
-  changeCursorYear(year) {
-    const {
-      calendarView: view,
-      cursor: { month, day },
-    } = this.props.app;
+  changeCursorYear({ year, month, day }) {
+    const { calendarView: view } = this.props.app;
     this.props.domex.resource.post('/change_cursor', {
       data: {
         date: {
@@ -65,7 +81,39 @@ class SimpleLayout extends React.Component {
       });
     };
   }
+  renderYearChooser() {
+    return (
+      <Select
+        value={this.props.app.cursor.year}
+        showSearch
+        onChange={this.handleChangeYearCursor()}
+      >
+        {years.map(item => (
+          <Option value={item.yr} key={item.yr}>
+            {item.local}
+          </Option>
+        ))}
+      </Select>
+    );
+  }
+  renderMonthChooser() {
+    const months = calendar.month.np.long;
+    return (
+      <Select
+        value={this.props.app.cursor.month}
+        showSearch
+        onChange={this.handleChangeYearCursor()}
+      >
+        {Object.keys(months).map(key => (
+          <Option value={key} key={key}>
+            {months[parseInt(key) - 1]}
+          </Option>
+        ))}
+      </Select>
+    );
+  }
   render() {
+    const calendarView = this.props.app.calendarView;
     return (
       <Layout theme="light" position="fixed">
         <Sider
@@ -99,8 +147,8 @@ class SimpleLayout extends React.Component {
                   onClick={this.toggle}
                 />
               </Col>
-              <Col span={12} />
-              <Col span={5}>
+              <Col span={2} />
+              <Col span={12}>
                 <Button
                   shape="circle"
                   onClick={this.handleChangeYearCursor('-')}
@@ -115,22 +163,15 @@ class SimpleLayout extends React.Component {
                   &gt;
                 </Button>
                 &nbsp;
-                <Select
-                  value={this.props.app.cursor.year}
-                  showSearch
-                  style={{ width: 120 }}
-                  onChange={this.handleChangeYearCursor()}
-                >
-                  {years.map(item => (
-                    <Option value={item.yr} key={item.yr}>
-                      {item.local}
-                    </Option>
-                  ))}
-                </Select>
+                {this.renderYearChooser()}
+                {renderIf(
+                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
+                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value,
+                )(this.renderMonthChooser())}
               </Col>
               <Col span={3}>
                 <Select
-                  value={this.props.app.calendarView}
+                  value={calendarView}
                   style={{ width: 120 }}
                   onChange={this.handleChangeCalendarView()}
                 >

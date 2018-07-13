@@ -7,22 +7,33 @@ const { week } = calendar;
 class Week extends Component {
   static TOTAL_DAYS = 7;
   render() {
+    const styles = {};
+    if (this.props.singleView) {
+      Object.assign(styles, {
+        height: '50px',
+        lineHeight: '50px',
+        borderWidth: '2px',
+      });
+    }
     return (
       <Row>
         {week.np[this.props.short ? 'short' : 'long'].map((weekDay) => (
           <Col
+            key={weekDay}
             span={3}
             style={{
-              borderWidth: '3px',
-              height: '50px',
+              borderWidth: '0px',
+              height: '25px',
               margin: '0px',
               textAlign: 'center',
               borderStyle: 'solid',
               borderColor: '#e8e8e8',
-              lineHeight: '50px',
+              lineHeight: '25px',
+              ...styles,
             }}
           >
-            {weekDay}
+            {!this.props.singleView && (weekDay || '').substring(0, 2)}
+            {this.props.singleView && weekDay}
           </Col>
         ))}
       </Row>
@@ -32,8 +43,10 @@ class Week extends Component {
 
 Week.defaultProps = {
   short: false,
+  singleView: false,
 };
 Week.propTypes = {
+  singleView: Proptypes.bool.isRequired,
   short: Proptypes.bool.isRequired,
 };
 export default Week;

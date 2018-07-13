@@ -6,7 +6,6 @@ import './App.css';
 import NepaliDate from './core/NepaliDate';
 import Calendar from './pages/Calendar';
 import Layout from './Layout';
-import DomexContext from './DomexContext';
 
 const year = 2075;
 class App extends Component {
@@ -21,21 +20,19 @@ class App extends Component {
     return (
       <div className="App">
         <Layout app={this.props.app} domex={this.props.domex}>
-          <DomexContext.Provider value={this.props.domex}>
-            <Switch>
-              <Route
-                domex={this.props.domex}
-                path="/calendar/view/:view/:year/:month/:day"
-                component={Calendar}
-              />{' '}
-              <Redirect
-                from="*"
-                to={`/calendar/view/year/${today.nepaliYear}/${
-                  today.nepaliMonth
-                }/${today.nepaliDay}`}
-              />
-            </Switch>
-          </DomexContext.Provider>
+          <Switch>
+            <Route
+              domex={this.props.domex}
+              path="/calendar/view/:view/:year/:month/:day"
+              component={Calendar}
+            />{' '}
+            <Redirect
+              from="*"
+              to={`/calendar/view/year/${today.nepaliYear}/${
+                today.nepaliMonth
+              }/${today.nepaliDay}`}
+            />
+          </Switch>
         </Layout>
       </div>
     );
@@ -46,7 +43,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   app: state.app,
 });
 export default withRouter(connect(mapStateToProps)(App));

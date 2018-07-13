@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Domex } from './domex';
-import DomexRedux from './domex-redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
@@ -15,7 +13,7 @@ ReactDOM.render(
       <App domex={domex} />
     </BrowserRouter>
   </Provider>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
 
 registerServiceWorker();

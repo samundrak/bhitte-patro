@@ -23,37 +23,64 @@ class SimpleLayout extends React.Component {
     });
   };
   handleChangeYearCursor(step) {
-    return value => {
-      let { year, month, day } = this.props.app.cursor;
-      const calendarView = this.props.app.calendarView;
-      if (!step) {
-        year = parseInt(value);
-      }
-      if (step === '+') {
-        switch (calendarView) {
-          case CALENDAR_VIEW_TYPE.YEAR.value:
-            if (year < YEAR_RANGE_NEPALI[1]) {
-              year = parseInt(year) + 1;
-            }
-            break;
-          case CALENDAR_VIEW_TYPE.MONTH.value:
-            month = parseInt(month) + 1;
-            break;
-        }
-      }
-      if (step === '-') {
-        switch (calendarView) {
-          case CALENDAR_VIEW_TYPE.YEAR.value:
-            if (year > YEAR_RANGE_NEPALI[0]) {
-              year = parseInt(year) - 1;
-            }
-            break;
-          case CALENDAR_VIEW_TYPE.MONTH.value:
-            month = parseInt(month) - 1;
-            break;
-        }
-      }
-      this.changeCursorYear({ year, month, day });
+    return (value) => {
+      this.props.domex.resource
+        .patch('/change_cursor', {
+          data: {
+            step,
+            value,
+          },
+        })
+        .then(({ data }) => {
+          const { date, view } = data;
+          const route = `/calendar/view/${view}/${date.year}/${date.month}/${
+            date.day
+          }`;
+          this.props.history.push(route);
+        });
+
+      // let { year, month, day } = this.props.app.cursor;
+      // const calendarView = this.props.app.calendarView;
+      // if (!step) {
+      //   year = parseInt(value);
+      // }
+      // if (step === '+') {
+      //   switch (calendarView) {
+      //     case CALENDAR_VIEW_TYPE.YEAR.value:
+      //       if (year < YEAR_RANGE_NEPALI[1]) {
+      //         day = 1;
+      //         year = parseInt(year) + 1;
+      //       }
+      //       break;
+      //     case CALENDAR_VIEW_TYPE.MONTH.value:
+      //       month = parseInt(month) + 1;
+      //       if (month > 12) {
+      //         month = 1;
+      //         year = parseInt(year) + 1;
+      //       }
+      //       day = 1;
+      //       break;
+      //   }
+      // }
+      // if (step === '-') {
+      //   switch (calendarView) {
+      //     case CALENDAR_VIEW_TYPE.YEAR.value:
+      //       if (year > YEAR_RANGE_NEPALI[0]) {
+      //         year = parseInt(year) - 1;
+      //         day = 1;
+      //       }
+      //       break;
+      //     case CALENDAR_VIEW_TYPE.MONTH.value:
+      //       month = parseInt(month) - 1;
+      //       day = 1;
+      //       if (month < 1) {
+      //         month = 12;
+      //         year = parseInt(year) - 1;
+      //       }
+      //       break;
+      //   }
+      // }
+      // this.changeCursorYear({ year, month, day });
     };
   }
 
@@ -72,7 +99,7 @@ class SimpleLayout extends React.Component {
     this.props.history.push(route);
   }
   handleChangeCalendarView() {
-    return view => {
+    return (view) => {
       const { year, month, day } = this.props.app.cursor;
       const route = `/calendar/view/${view}/${year}/${month}/${day}`;
       this.props.history.push(route);
@@ -88,7 +115,7 @@ class SimpleLayout extends React.Component {
         showSearch
         onChange={this.handleChangeYearCursor()}
       >
-        {years.map(item => (
+        {years.map((item) => (
           <Option value={item.yr} key={item.yr}>
             {item.local}
           </Option>
@@ -100,13 +127,14 @@ class SimpleLayout extends React.Component {
     const months = calendar.month.np.long;
     return (
       <Select
-        value={this.props.app.cursor.month}
+        value={this.props.app.cursor.month - 1}
         showSearch
         onChange={this.handleChangeYearCursor()}
+        style={{ width: '120px' }}
       >
-        {Object.keys(months).map(key => (
-          <Option value={parseInt(key)} key={key}>
-            {months[parseInt(key) - 1]}
+        {Object.keys(months).map((key, index) => (
+          <Option value={index} key={index}>
+            {months[index]}
           </Option>
         ))}
       </Select>
@@ -166,7 +194,7 @@ class SimpleLayout extends React.Component {
                 {this.renderYearChooser()}
                 {renderIf(
                   calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
-                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value,
+                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
                 )(this.renderMonthChooser())}
               </Col>
               <Col span={3}>
@@ -175,7 +203,7 @@ class SimpleLayout extends React.Component {
                   style={{ width: 120 }}
                   onChange={this.handleChangeCalendarView()}
                 >
-                  {Object.keys(CALENDAR_VIEW_TYPE).map(item => (
+                  {Object.keys(CALENDAR_VIEW_TYPE).map((item) => (
                     <Option
                       value={CALENDAR_VIEW_TYPE[item].value}
                       key={CALENDAR_VIEW_TYPE[item].value}

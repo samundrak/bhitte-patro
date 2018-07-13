@@ -8,15 +8,24 @@ class Week extends Component {
   render() {
     return (
       <Row>
-        {this.props.data.map((day, index) => <Day day={day} index={index} />)}
+        {this.props.data.map((day, index) => (
+          <Day
+            singleView={this.props.singleView}
+            key={index}
+            day={day}
+            index={index}
+          />
+        ))}
       </Row>
     );
   }
 }
 Week.defaultProps = {
   data: [],
+  singleView: false,
 };
 Week.propTypes = {
   data: PropTypes.array.isRequired,
+  singleView: PropTypes.bool.isRequired,
 };
 export default Week;

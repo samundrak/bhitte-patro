@@ -20,6 +20,8 @@ class Calendar extends React.Component {
       case CALENDAR_VIEW_TYPE.MONTH.value:
         return (
           <Month
+            key={`${cursor.year}/${cursor.month}`}
+            singleView
             name={calendar.month.np.long[cursor.month - 1]}
             weekStart={value[cursor.month - 1][0]}
             totalDays={value[cursor.month - 1][1]}
@@ -35,9 +37,9 @@ class Calendar extends React.Component {
     domex.resource.post('/change_cursor', {
       data: {
         date: {
-          year,
-          month,
-          day,
+          year: parseInt(year, 10),
+          month: parseInt(month, 10),
+          day: parseInt(day, 10),
         },
       },
     });
@@ -48,7 +50,7 @@ class Calendar extends React.Component {
     });
   }
 }
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   app: state.app,
 });
 export default connect(mapStateToProps)(Calendar);

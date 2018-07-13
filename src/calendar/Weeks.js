@@ -30,6 +30,15 @@ class Weeks extends React.Component {
           .map((item, index) => ({ isDay: false }))
       );
     }
+    if (!this.props.singleView) {
+      if (weeks.length < 6) {
+        weeks.push(
+          Array(7)
+            .fill(true)
+            .map((item, index) => ({ isDay: false }))
+        );
+      }
+    }
     return weeks;
   }
   componentDidMount() {
@@ -44,7 +53,12 @@ class Weeks extends React.Component {
     return (
       <Row>
         {this.state.weeks.map((week, index) => (
-          <Week data={week} count={index} />
+          <Week
+            singleView={this.props.singleView}
+            data={week}
+            count={index}
+            key={index}
+          />
         ))}
       </Row>
     );
@@ -54,5 +68,6 @@ class Weeks extends React.Component {
 Weeks.propTypes = {
   totalDays: PropTypes.number.isRequired,
   weekStart: PropTypes.number.isRequired,
+  singleView: PropTypes.bool.isRequired,
 };
 export default Weeks;

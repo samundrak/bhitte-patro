@@ -5,14 +5,28 @@ import WeekHeader from './WeekHeader';
 import Weeks from './Weeks';
 
 class Month extends React.Component {
+  getStyle() {
+    if (this.props.singleView) {
+      return {
+        marginLeft: '100px',
+        marginTop: '50px',
+      };
+    }
+    return {
+      margin: '10px',
+    };
+  }
   render() {
     return (
-      <Row style={{ margin: '10px' }}>
+      <Row style={this.getStyle()}>
         <Row>
-          <Col span={24}>{this.props.name}</Col>
+          <Col span={8} />
+          <Col span={8}>{this.props.name}</Col>
+          <Col span={8} />
         </Row>
-        <WeekHeader />
+        <WeekHeader singleView={this.props.singleView} />
         <Weeks
+          singleView={this.props.singleView}
           weekStart={this.props.weekStart}
           totalDays={this.props.totalDays}
         />
@@ -21,7 +35,11 @@ class Month extends React.Component {
   }
 }
 
+Month.defaultProps = {
+  singleView: false,
+};
 Month.propTypes = {
+  singleView: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   totalDays: PropTypes.number.isRequired,
   weekStart: PropTypes.number.isRequired,

@@ -10,7 +10,7 @@ class Year extends React.Component {
     return (
       <Row>
         {Year.MONTHS.long.map((name, index) => (
-          <Col span={12}>
+          <Col span={8} key={name}>
             <Month
               name={name}
               weekStart={this.props.value[index][0]}

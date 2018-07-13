@@ -5,29 +5,33 @@ import YearView from '../views/Year';
 import data from '../data/years.json';
 import { CALENDAR_VIEW_TYPE } from '../store/state';
 import domex from '../store';
+import calendar from '../data/calendar';
+import Month from '../calendar/Month';
 
 class Calendar extends React.Component {
   renderCalendarView() {
     const view = this.props.app.calendarView;
-    const cursorYear = this.props.app.cursor.year;
+    const cursor = this.props.app.cursor;
+
+    const value = data[cursor.year];
     switch (view) {
       case CALENDAR_VIEW_TYPE.YEAR.value:
+        return <YearView key={cursor.year} value={value} year={cursor.year} />;
+      case CALENDAR_VIEW_TYPE.MONTH.value:
         return (
-          <YearView
-            key={cursorYear}
-            value={data[cursorYear]}
-            year={cursorYear}
+          <Month
+            name={calendar.month.np.long[cursor.month - 1]}
+            weekStart={value[cursor.month - 1][0]}
+            totalDays={value[cursor.month - 1][1]}
           />
         );
-      case CALENDAR_VIEW_TYPE.MONTH.value:
-        return <div>Not avu</div>;
     }
   }
   render() {
     return <div>{this.renderCalendarView()}</div>;
   }
   componentDidMount(x, y) {
-    const { year, month, day } = this.props.match.params;
+    const { year, month, day, view } = this.props.match.params;
     domex.resource.post('/change_cursor', {
       data: {
         date: {
@@ -35,6 +39,11 @@ class Calendar extends React.Component {
           month,
           day,
         },
+      },
+    });
+    domex.resource.post('/change_calendar_view', {
+      data: {
+        view,
       },
     });
   }

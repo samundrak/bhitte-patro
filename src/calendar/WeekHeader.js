@@ -12,15 +12,19 @@ class Week extends Component {
       Object.assign(styles, {
         height: '50px',
         lineHeight: '50px',
-        borderWidth: '2px',
+        borderRight: '#e0e0e0 1px solid',
       });
     }
     return (
-      <Row>
+      <Row
+        style={{
+          borderBottom: this.props.singleView && '#e0e0e0 1px solid',
+        }}
+      >
         {week.np[this.props.short ? 'short' : 'long'].map((weekDay) => (
           <Col
             key={weekDay}
-            span={3}
+            md={3}
             style={{
               borderWidth: '0px',
               height: '25px',

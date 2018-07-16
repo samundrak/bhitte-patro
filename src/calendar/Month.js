@@ -8,8 +8,9 @@ class Month extends React.Component {
   getStyle() {
     if (this.props.singleView) {
       return {
-        marginLeft: '100px',
-        marginTop: '50px',
+        // marginLeft: '100px',
+        // marginTop: '50px',
+        marginLeft: '0px',
       };
     }
     return {
@@ -19,11 +20,13 @@ class Month extends React.Component {
   render() {
     return (
       <Row style={this.getStyle()}>
-        <Row>
-          <Col span={8} />
-          <Col span={8}>{this.props.name}</Col>
-          <Col span={8} />
-        </Row>
+        {!this.props.singleView && (
+          <Row>
+            <Col span={8} />
+            <Col span={8}>{this.props.name}</Col>
+            <Col span={8} />
+          </Row>
+        )}
         <WeekHeader singleView={this.props.singleView} />
         <Weeks
           singleView={this.props.singleView}

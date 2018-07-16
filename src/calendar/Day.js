@@ -8,9 +8,9 @@ class Day extends Component {
     const styles = {};
     if (this.props.singleView) {
       Object.assign(styles, {
-        height: '100px',
-        lineHeight: '100px',
-        borderWidth: '1px',
+        height: '130px',
+        padding: '10px',
+        borderRight: '#e0e0e0 1px solid',
       });
     }
     return (
@@ -31,7 +31,16 @@ class Day extends Component {
           !this.props.singleView && this.props.day.isDay ? 'daySingleView' : ''
         }
       >
-        {replaceNumberWithAnka(this.props.day.number)}
+        <h2
+          style={{
+            fontWeight: '400',
+            margin: '0',
+            fontSize: (this.props.singleView && '16px') || '14px',
+            float: this.props.singleView && 'left',
+          }}
+        >
+          {replaceNumberWithAnka(this.props.day.number)}
+        </h2>
       </Col>
     );
   }

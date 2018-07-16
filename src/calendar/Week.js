@@ -7,7 +7,11 @@ class Week extends Component {
   static DAYS_COUNT = Array(7).fill(true);
   render() {
     return (
-      <Row>
+      <Row
+        style={{
+          borderBottom: this.props.singleView && '#e0e0e0 1px solid',
+        }}
+      >
         {this.props.data.map((day, index) => (
           <Day
             singleView={this.props.singleView}

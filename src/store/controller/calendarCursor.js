@@ -8,12 +8,17 @@ export default {
     return { cursor: date };
   },
   async update(req, res) {
-    const { step, value } = req.body;
+    const { step, value, type } = req.body;
     const state = req.state.app;
     let { year, month, day } = state.cursor;
     const calendarView = state.calendarView;
     if (!step) {
-      year = parseInt(value);
+      if (type === 'year') {
+        year = parseInt(value);
+      }
+      if (type === 'month') {
+        month = parseInt(value + 1);
+      }
     }
     if (step === '+') {
       switch (calendarView) {

@@ -24,79 +24,34 @@ class SimpleLayout extends React.Component {
   };
   handleChangeYearCursor(step) {
     return (value) => {
-      this.props.domex.resource
-        .patch('/change_cursor', {
-          data: {
-            step,
-            value,
-          },
-        })
-        .then(({ data }) => {
-          const { date, view } = data;
-          const route = `/calendar/view/${view}/${date.year}/${date.month}/${
-            date.day
-          }`;
-          this.props.history.push(route);
-        });
-
-      // let { year, month, day } = this.props.app.cursor;
-      // const calendarView = this.props.app.calendarView;
-      // if (!step) {
-      //   year = parseInt(value);
-      // }
-      // if (step === '+') {
-      //   switch (calendarView) {
-      //     case CALENDAR_VIEW_TYPE.YEAR.value:
-      //       if (year < YEAR_RANGE_NEPALI[1]) {
-      //         day = 1;
-      //         year = parseInt(year) + 1;
-      //       }
-      //       break;
-      //     case CALENDAR_VIEW_TYPE.MONTH.value:
-      //       month = parseInt(month) + 1;
-      //       if (month > 12) {
-      //         month = 1;
-      //         year = parseInt(year) + 1;
-      //       }
-      //       day = 1;
-      //       break;
-      //   }
-      // }
-      // if (step === '-') {
-      //   switch (calendarView) {
-      //     case CALENDAR_VIEW_TYPE.YEAR.value:
-      //       if (year > YEAR_RANGE_NEPALI[0]) {
-      //         year = parseInt(year) - 1;
-      //         day = 1;
-      //       }
-      //       break;
-      //     case CALENDAR_VIEW_TYPE.MONTH.value:
-      //       month = parseInt(month) - 1;
-      //       day = 1;
-      //       if (month < 1) {
-      //         month = 12;
-      //         year = parseInt(year) - 1;
-      //       }
-      //       break;
-      //   }
-      // }
-      // this.changeCursorYear({ year, month, day });
+      this.changeCursorYear({
+        step,
+        type: 'year',
+        value,
+      });
     };
   }
-
-  changeCursorYear({ year, month, day }) {
-    const { calendarView: view } = this.props.app;
-    this.props.domex.resource.post('/change_cursor', {
-      data: {
-        date: {
-          year,
-          month,
-          day,
-        },
-      },
-    });
-    const route = `/calendar/view/${view}/${year}/${month}/${day}`;
-    this.props.history.push(route);
+  handleChangeMonthCursor(step) {
+    return (value) => {
+      this.changeCursorYear({
+        step,
+        type: 'month',
+        value,
+      });
+    };
+  }
+  changeCursorYear(data) {
+    this.props.domex.resource
+      .patch('/change_cursor', {
+        data,
+      })
+      .then(({ data }) => {
+        const { date, view } = data;
+        const route = `/calendar/view/${view}/${date.year}/${date.month}/${
+          date.day
+        }`;
+        this.props.history.push(route);
+      });
   }
   handleChangeCalendarView() {
     return (view) => {
@@ -129,7 +84,7 @@ class SimpleLayout extends React.Component {
       <Select
         value={this.props.app.cursor.month - 1}
         showSearch
-        onChange={this.handleChangeYearCursor()}
+        onChange={this.handleChangeMonthCursor()}
         style={{ width: '120px' }}
       >
         {Object.keys(months).map((key, index) => (
@@ -144,37 +99,10 @@ class SimpleLayout extends React.Component {
     const calendarView = this.props.app.calendarView;
     return (
       <Layout theme="light" position="fixed">
-        <Sider
-          theme="light"
-          trigger={null}
-          collapsible
-          collapsed={this.state.collapsed}
-        >
-          <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
-            <Menu.Item key="1">
-              <Icon type="user" />
-              <span>nav 1</span>
-            </Menu.Item>
-            <Menu.Item key="2">
-              <Icon type="video-camera" />
-              <span>nav 2</span>
-            </Menu.Item>
-            <Menu.Item key="3">
-              <Icon type="upload" />
-              <span>nav 3</span>
-            </Menu.Item>
-          </Menu>
-        </Sider>
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }}>
             <Row type="flex" justify="space-between">
-              <Col span={1}>
-                <Icon
-                  className="trigger"
-                  type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                  onClick={this.toggle}
-                />
-              </Col>
+              <Col span={1} />
               <Col span={2} />
               <Col span={12}>
                 <Button

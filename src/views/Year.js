@@ -12,6 +12,7 @@ class Year extends React.Component {
         {Year.MONTHS.long.map((name, index) => (
           <Col span={8} key={name}>
             <Month
+              cursor={this.props.cursor}
               name={name}
               weekStart={this.props.value[index][0]}
               totalDays={this.props.value[index][1]}
@@ -24,6 +25,7 @@ class Year extends React.Component {
 }
 
 Year.propTypes = {
+  cursor: PropTypes.object.isRequired,
   value: PropTypes.array.isRequired,
   year: PropTypes.number.isRequired,
 };

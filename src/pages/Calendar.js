@@ -16,10 +16,18 @@ class Calendar extends React.Component {
     const value = data[cursor.year];
     switch (view) {
       case CALENDAR_VIEW_TYPE.YEAR.value:
-        return <YearView key={cursor.year} value={value} year={cursor.year} />;
+        return (
+          <YearView
+            key={cursor.year}
+            value={value}
+            year={cursor.year}
+            cursor={cursor}
+          />
+        );
       case CALENDAR_VIEW_TYPE.MONTH.value:
         return (
           <Month
+            cursor={cursor}
             key={`${cursor.year}/${cursor.month}`}
             singleView
             name={calendar.month.np.long[cursor.month - 1]}

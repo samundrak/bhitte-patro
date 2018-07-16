@@ -15,9 +15,12 @@ export default {
     if (!step) {
       if (type === 'year') {
         year = parseInt(value);
-      }
-      if (type === 'month') {
+      } else if (type === 'month') {
         month = parseInt(value + 1);
+      } else {
+        year = value.year;
+        month = value.month;
+        day = value.day;
       }
     }
     if (step === '+') {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Row } from 'antd';
 import chunk from 'lodash.chunk';
 import Week from './Week';
+import adbs from 'ad-bs-converter';
 
 class Weeks extends React.Component {
   constructor(props) {
@@ -13,12 +14,17 @@ class Weeks extends React.Component {
     };
   }
   createBeautifullWeeks(weekStart, totalDays) {
+    const cursor = this.props.cursor;
     const days = Array(weekStart)
       .fill({ isDay: false })
       .concat(
         Array(totalDays)
           .fill(true)
-          .map((item, index) => ({ isDay: true, number: index + 1 }))
+          .map((item, index) => ({
+            isDay: true,
+            number: index + 1,
+            ad: adbs.bs2ad(`${cursor.year}/${cursor.month}/${index + 1}`),
+          }))
       );
     const weeks = chunk(days, 7);
     const lastWeek = weeks[weeks.length - 1];
@@ -66,6 +72,7 @@ class Weeks extends React.Component {
 }
 
 Weeks.propTypes = {
+  cursor: PropTypes.object.isRequired,
   totalDays: PropTypes.number.isRequired,
   weekStart: PropTypes.number.isRequired,
   singleView: PropTypes.bool.isRequired,

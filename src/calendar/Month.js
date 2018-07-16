@@ -29,6 +29,7 @@ class Month extends React.Component {
         )}
         <WeekHeader singleView={this.props.singleView} />
         <Weeks
+          cursor={this.props.cursor}
           singleView={this.props.singleView}
           weekStart={this.props.weekStart}
           totalDays={this.props.totalDays}
@@ -46,5 +47,6 @@ Month.propTypes = {
   name: PropTypes.string.isRequired,
   totalDays: PropTypes.number.isRequired,
   weekStart: PropTypes.number.isRequired,
+  cursor: PropTypes.object.isRequired,
 };
 export default Month;

@@ -1,10 +1,11 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import renderIf from 'render-if';
 import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from './store/state';
 import { Layout, Menu, Icon, Select, Row, Col, Button } from 'antd';
 import { replaceNumberWithAnka } from './utils';
+import NepaliDate from './core/NepaliDate';
 import calendar from './data/calendar';
-import { withRouter } from 'react-router';
 const Option = Select.Option;
 
 const { Header, Sider, Content } = Layout;
@@ -95,16 +96,57 @@ class SimpleLayout extends React.Component {
       </Select>
     );
   }
+  handleGotoToday() {
+    return () => {
+      const np = NepaliDate.today();
+      this.changeCursorYear({
+        value: {
+          year: np.nepaliYear,
+          month: np.nepaliMonth,
+          day: np.nepaliDay,
+        },
+      });
+    };
+  }
   render() {
     const calendarView = this.props.app.calendarView;
     return (
       <Layout theme="light" position="fixed">
+        <Sider
+          theme="light"
+          trigger={null}
+          collapsible
+          collapsed={this.state.collapsed}
+        >
+          <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
+            <Menu.Item key="1">
+              <Icon type="user" />
+              <span>nav 1</span>
+            </Menu.Item>
+            <Menu.Item key="2">
+              <Icon type="video-camera" />
+              <span>nav 2</span>
+            </Menu.Item>
+            <Menu.Item key="3">
+              <Icon type="upload" />
+              <span>nav 3</span>
+            </Menu.Item>
+          </Menu>
+        </Sider>
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }}>
             <Row type="flex" justify="space-between">
-              <Col span={1} />
+              <Col span={1}>
+                <Icon
+                  className="trigger"
+                  type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+                  onClick={this.toggle}
+                />
+              </Col>
               <Col span={2} />
               <Col span={12}>
+                <Button onClick={this.handleGotoToday()}>आज</Button>
+                &nbsp;{' '}
                 <Button
                   shape="circle"
                   onClick={this.handleChangeYearCursor('-')}

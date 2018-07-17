@@ -12,7 +12,9 @@ export default {
     const state = req.state.app;
     let { year, month, day } = state.cursor;
     const calendarView = state.calendarView;
+    let flipAnimation = '';
     if (!step) {
+      flipAnimation = 'fadeInDown';
       if (type === 'year') {
         year = parseInt(value);
       } else if (type === 'month') {
@@ -24,6 +26,7 @@ export default {
       }
     }
     if (step === '+') {
+      flipAnimation = 'fadeInRight';
       switch (calendarView) {
         case CALENDAR_VIEW_TYPE.YEAR.value:
           if (year < YEAR_RANGE_NEPALI[1]) {
@@ -44,6 +47,7 @@ export default {
       }
     }
     if (step === '-') {
+      flipAnimation = 'fadeInLeft';
       switch (calendarView) {
         case CALENDAR_VIEW_TYPE.YEAR.value:
           if (year > YEAR_RANGE_NEPALI[0]) {
@@ -65,6 +69,6 @@ export default {
     }
     const date = { year, month, day };
     res.json({ date, view: calendarView });
-    return { cursor: date };
+    return { cursor: date, flipAnimation };
   },
 };

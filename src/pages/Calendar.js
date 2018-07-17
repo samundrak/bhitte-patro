@@ -19,6 +19,7 @@ class Calendar extends React.Component {
       case CALENDAR_VIEW_TYPE.YEAR.value:
         return (
           <YearView
+            flipAnimation={this.props.app.flipAnimation}
             today={this.props.app.today}
             key={cursor.year}
             value={value}
@@ -29,6 +30,7 @@ class Calendar extends React.Component {
       case CALENDAR_VIEW_TYPE.MONTH.value:
         return (
           <Month
+            flipAnimation={this.props.app.flipAnimation}
             today={this.props.app.today}
             cursor={cursor}
             key={`${cursor.year}/${cursor.month}`}

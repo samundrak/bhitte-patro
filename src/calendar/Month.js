@@ -62,7 +62,12 @@ class Month extends React.Component {
 
   render() {
     return (
-      <Row style={this.getStyle()}>
+      <Row
+        style={this.getStyle()}
+        className={`animated lessAnimation ${
+          this.props.singleView ? this.props.flipAnimation : ''
+        }`}
+      >
         {!this.props.singleView && (
           <Row>
             <Col span={8} />
@@ -89,11 +94,16 @@ class Month extends React.Component {
     );
   }
   componentDidMount() {
+    const weeks = this.createBeautifullWeeks(
+      this.props.weekStart,
+      this.props.totalDays
+    );
+    const months = [];
+    // weeks.forEach(week => {
+    //   week.forEach(day => {})
+    // })
     this.setState({
-      weeks: this.createBeautifullWeeks(
-        this.props.weekStart,
-        this.props.totalDays
-      ),
+      weeks,
     });
   }
 }
@@ -103,6 +113,7 @@ Month.defaultProps = {
   handleDayClick: () => null,
 };
 Month.propTypes = {
+  flipAnimation: PropTypes.string,
   index: PropTypes.number.isRequired,
   today: PropTypes.shape({
     year: PropTypes.number.isRequired,

@@ -13,6 +13,13 @@ class Day extends Component {
       this.props.day.number === today.day
     );
   }
+  isSelectedDay() {
+    const { cursor, today } = this.props;
+    return (
+      this.props.month + 1 === cursor.month &&
+      this.props.day.number === cursor.day
+    );
+  }
   render() {
     const styles = {};
     const isToday = this.isCursorDayToday();
@@ -41,13 +48,13 @@ class Day extends Component {
         span={3}
         className={`${!singleView && day.isDay ? 'daySingleView' : ''} 
         ${(isToday && 'today') || ''}
+        ${this.isSelectedDay() && !isToday ? 'selection' : ''}
         `}
         onClick={this.props.handleDayClick(day)}
       >
-        <h
+        <span
           style={{
             fontWeight: '400',
-            margin: '0',
             fontSize: (singleView && '50px') || '14px',
             // float: this.props.singleView && 'left',
             paddingTop: this.props.singleView && '20%',
@@ -56,7 +63,7 @@ class Day extends Component {
           }}
         >
           {replaceNumberWithAnka(day.number)}
-        </h>
+        </span>
         {day.ad &&
           singleView && (
             <div

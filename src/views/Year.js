@@ -59,6 +59,7 @@ class Year extends React.Component {
 }
 
 Year.propTypes = {
+  flipAnimation: PropTypes.string,
   today: PropTypes.shape({
     year: PropTypes.number.isRequired,
     month: PropTypes.number.isRequired,

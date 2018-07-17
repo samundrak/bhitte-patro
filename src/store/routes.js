@@ -9,6 +9,10 @@ export default function(router) {
       res.json({});
       return { calendarView: req.body.view };
     })
+    .post('/today', async (req, res) => {
+      res.json({});
+      return { today: req.body };
+    })
     .post('/change_cursor', calendarCursor.create)
     .patch('/change_cursor', async () => ({}), calendarCursor.update);
 }

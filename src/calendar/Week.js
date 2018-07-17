@@ -7,13 +7,13 @@ class Week extends Component {
   static DAYS_COUNT = Array(7).fill(true);
   render() {
     return (
-      <Row
-        style={{
-          borderBottom: this.props.singleView && '#e0e0e0 1px solid',
-        }}
-      >
+      <Row style={{}}>
         {this.props.data.map((day, index) => (
           <Day
+            month={this.props.month}
+            cursor={this.props.cursor}
+            today={this.props.today}
+            handleDayClick={this.props.handleDayClick}
             singleView={this.props.singleView}
             key={index}
             day={day}
@@ -29,7 +29,19 @@ Week.defaultProps = {
   singleView: false,
 };
 Week.propTypes = {
+  today: PropTypes.shape({
+    year: PropTypes.number.isRequired,
+    month: PropTypes.number.isRequired,
+    day: PropTypes.number.isRequired,
+  }),
+  month: PropTypes.number.isRequired,
+  handleDayClick: PropTypes.func.isRequired,
   data: PropTypes.array.isRequired,
   singleView: PropTypes.bool.isRequired,
+  cursor: PropTypes.shape({
+    year: PropTypes.number.isRequired,
+    month: PropTypes.number.isRequired,
+    day: PropTypes.number.isRequired,
+  }).isRequired,
 };
 export default Week;

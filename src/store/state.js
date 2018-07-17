@@ -8,9 +8,15 @@ export const YEAR_RANGE_NEPALI = [1970, 2100];
 export default {
   currentYear: 2075,
   cursorYear: 2075,
-  current: {},
+  today: {
+    year: 0,
+    month: 0,
+    day: 0,
+  },
   cursor: {
     year: 2075,
+    month: 0,
+    day: 0,
   },
   calendarView: CALENDAR_VIEW_TYPE.YEAR.value,
 };

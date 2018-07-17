@@ -8,7 +8,7 @@ class Resource extends EventEmitter {
     super();
     this.doxpress = doxpress;
     this._routers = routers;
-    Object.values(Router.METHODS).forEach(method => {
+    Object.values(Router.METHODS).forEach((method) => {
       this[method] = (route, options) => {
         return this._execute(method, route, options);
       };
@@ -24,12 +24,12 @@ class Resource extends EventEmitter {
           return resolve(promisesAnswer);
         }
         promise()
-          .then(data => {
+          .then((data) => {
             promisesAnswer.push(data);
             prResolver(copyOfPromises.shift(), index + 1);
             onEachResolve(null, data, index);
           })
-          .catch(err => {
+          .catch((err) => {
             onEachResolve(err, null, index);
             reject(err);
           });
@@ -51,15 +51,15 @@ class Resource extends EventEmitter {
       response.setResolver(resolve);
       request.body = data;
       request.query = params;
-      const router = this._routers.find(router =>
-        router.hasRoute(method, route),
+      const router = this._routers.find((router) =>
+        router.hasRoute(method, route)
       );
       if (!router) {
         return reject(new Error(`Error: ${route} not found`));
       }
       const handlers = router.getHandlers(method, route);
       this.synchronousPromiseResolver(
-        handlers.map(handler => () => handler(request, response)),
+        handlers.map((handler) => () => handler(request, response)),
         (err, result, index) => {
           this.emit('handle:executed', {
             err,
@@ -73,8 +73,8 @@ class Resource extends EventEmitter {
           });
           // on every promise resolve or on rejectction
           // console.log(result);
-        },
-      ).catch(err => {
+        }
+      ).catch((err) => {
         reject(err);
         this.emit('handle:executed', {
           err,

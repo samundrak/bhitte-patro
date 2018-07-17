@@ -112,37 +112,10 @@ class SimpleLayout extends React.Component {
     const calendarView = this.props.app.calendarView;
     return (
       <Layout theme="light" position="fixed">
-        <Sider
-          theme="light"
-          trigger={null}
-          collapsible
-          collapsed={this.state.collapsed}
-        >
-          <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
-            <Menu.Item key="1">
-              <Icon type="user" />
-              <span>nav 1</span>
-            </Menu.Item>
-            <Menu.Item key="2">
-              <Icon type="video-camera" />
-              <span>nav 2</span>
-            </Menu.Item>
-            <Menu.Item key="3">
-              <Icon type="upload" />
-              <span>nav 3</span>
-            </Menu.Item>
-          </Menu>
-        </Sider>
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }}>
             <Row type="flex" justify="space-between">
-              <Col span={1}>
-                <Icon
-                  className="trigger"
-                  type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                  onClick={this.toggle}
-                />
-              </Col>
+              <Col span={1} />
               <Col span={2} />
               <Col span={12}>
                 <Button onClick={this.handleGotoToday()}>आज</Button>

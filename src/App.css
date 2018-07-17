@@ -13,3 +13,7 @@
 .daySingleView:hover {
   background-color: #d6d6d6;
 }
+.today {
+  font-weight: 500;
+  background-color: #4285f4;
+}

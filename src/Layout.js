@@ -109,15 +109,26 @@ class SimpleLayout extends React.Component {
     };
   }
   renderGregorianMonths() {
-    const gregorianOfCursor = this.props.app.gregorianOfCursor;
-    if (!gregorianOfCursor.months.length) return '';
+    const { months, years } = this.props.app.gregorianOfCursor;
+    if (!months.length) return '';
 
+    if (years.length === 1) {
+      return (
+        <div>
+          <b>
+            {months.toString().replace(',', '/')}
+            &nbsp;
+            {years.toString().replace(',', '/')}
+          </b>
+        </div>
+      );
+    }
     return (
       <div>
         <b>
-          {gregorianOfCursor.months.toString().replace(',', '/')}
+          {months[0]}/{years[0]}
           &nbsp;
-          {gregorianOfCursor.year}
+          {months[1]}/{years[1]}
         </b>
       </div>
     );

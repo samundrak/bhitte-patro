@@ -11,10 +11,10 @@ import NepaliDate from '../core/NepaliDate';
 
 class Calendar extends React.Component {
   handleUpdateAdMonths() {
-    return (adYear, adMonths) => {
+    return (adYears, adMonths) => {
       domex.resource.post('/update_gregorian_months_local_months', {
         data: {
-          year: adYear,
+          years: Array.from(adYears),
           months: Array.from(adMonths),
         },
       });

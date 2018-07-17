@@ -17,7 +17,7 @@ class Month extends React.Component {
   createBeautifullWeeks(weekStart, totalDays) {
     const cursor = this.props.cursor;
     const adMonths = new Set();
-    let adYear = 0;
+    let adYears = new Set();
     const days = Array(weekStart)
       .fill({ isDay: false })
       .concat(
@@ -27,9 +27,8 @@ class Month extends React.Component {
             const ad = adbs.bs2ad(
               `${cursor.year}/${cursor.month}/${index + 1}`
             );
-            if (!adYear) {
-              adYear = ad.year;
-            }
+
+            adYears.add(ad.year);
             adMonths.add(ad.strMonth);
             return {
               isDay: true,
@@ -58,7 +57,7 @@ class Month extends React.Component {
         );
       }
     }
-    return { weeks, adMonths, adYear };
+    return { weeks, adMonths, adYears };
   }
   getStyle() {
     if (this.props.singleView) {
@@ -105,12 +104,12 @@ class Month extends React.Component {
     );
   }
   componentDidMount() {
-    const { weeks, adMonths, adYear } = this.createBeautifullWeeks(
+    const { weeks, adMonths, adYears } = this.createBeautifullWeeks(
       this.props.weekStart,
       this.props.totalDays
     );
     if (this.props.singleView) {
-      this.props.updateAdMonths(adYear, adMonths);
+      this.props.updateAdMonths(adYears, adMonths);
     }
     this.setState({
       weeks,

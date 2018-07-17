@@ -8,7 +8,7 @@ export const YEAR_RANGE_NEPALI = [1970, 2100];
 export default {
   gregorianOfCursor: {
     months: [],
-    year: 2018,
+    years: [],
   },
   flipAnimation: '',
   currentYear: 2075,

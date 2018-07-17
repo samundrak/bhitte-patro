@@ -13,6 +13,12 @@ export default function(router) {
       res.json({});
       return { today: req.body };
     })
+    .post('/update_gregorian_months_local_months', async (req, res) => {
+      res.json({});
+      return {
+        gregorianOfCursor: req.body,
+      };
+    })
     .post('/change_cursor', calendarCursor.create)
     .patch('/change_cursor', async () => ({}), calendarCursor.update);
 }

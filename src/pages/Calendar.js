@@ -10,6 +10,16 @@ import Month from '../calendar/Month';
 import NepaliDate from '../core/NepaliDate';
 
 class Calendar extends React.Component {
+  handleUpdateAdMonths() {
+    return (adYear, adMonths) => {
+      domex.resource.post('/update_gregorian_months_local_months', {
+        data: {
+          year: adYear,
+          months: Array.from(adMonths),
+        },
+      });
+    };
+  }
   renderCalendarView() {
     const view = this.props.app.calendarView;
     const cursor = this.props.app.cursor;
@@ -30,6 +40,7 @@ class Calendar extends React.Component {
       case CALENDAR_VIEW_TYPE.MONTH.value:
         return (
           <Month
+            updateAdMonths={this.handleUpdateAdMonths()}
             flipAnimation={this.props.app.flipAnimation}
             today={this.props.app.today}
             cursor={cursor}

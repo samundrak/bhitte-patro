@@ -6,6 +6,10 @@ export const CALENDAR_VIEW_TYPE = {
 };
 export const YEAR_RANGE_NEPALI = [1970, 2100];
 export default {
+  gregorianOfCursor: {
+    months: [],
+    year: 2018,
+  },
   flipAnimation: '',
   currentYear: 2075,
   cursorYear: 2075,

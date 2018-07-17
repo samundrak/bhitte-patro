@@ -16,17 +16,28 @@ class Month extends React.Component {
   }
   createBeautifullWeeks(weekStart, totalDays) {
     const cursor = this.props.cursor;
+    const adMonths = new Set();
+    let adYear = 0;
     const days = Array(weekStart)
       .fill({ isDay: false })
       .concat(
         Array(totalDays)
           .fill(true)
-          .map((item, index) => ({
-            isDay: true,
-            number: index + 1,
-            month: this.props.index,
-            ad: adbs.bs2ad(`${cursor.year}/${cursor.month}/${index + 1}`),
-          }))
+          .map((item, index) => {
+            const ad = adbs.bs2ad(
+              `${cursor.year}/${cursor.month}/${index + 1}`
+            );
+            if (!adYear) {
+              adYear = ad.year;
+            }
+            adMonths.add(ad.strMonth);
+            return {
+              isDay: true,
+              number: index + 1,
+              month: this.props.index,
+              ad,
+            };
+          })
       );
     const weeks = chunk(days, 7);
     const lastWeek = weeks[weeks.length - 1];
@@ -47,7 +58,7 @@ class Month extends React.Component {
         );
       }
     }
-    return weeks;
+    return { weeks, adMonths, adYear };
   }
   getStyle() {
     if (this.props.singleView) {
@@ -94,14 +105,13 @@ class Month extends React.Component {
     );
   }
   componentDidMount() {
-    const weeks = this.createBeautifullWeeks(
+    const { weeks, adMonths, adYear } = this.createBeautifullWeeks(
       this.props.weekStart,
       this.props.totalDays
     );
-    const months = [];
-    // weeks.forEach(week => {
-    //   week.forEach(day => {})
-    // })
+    if (this.props.singleView) {
+      this.props.updateAdMonths(adYear, adMonths);
+    }
     this.setState({
       weeks,
     });
@@ -111,8 +121,10 @@ class Month extends React.Component {
 Month.defaultProps = {
   singleView: false,
   handleDayClick: () => null,
+  updateAdMonths: () => null,
 };
 Month.propTypes = {
+  updateAdMonths: PropTypes.func,
   flipAnimation: PropTypes.string,
   index: PropTypes.number.isRequired,
   today: PropTypes.shape({

@@ -108,6 +108,20 @@ class SimpleLayout extends React.Component {
       });
     };
   }
+  renderGregorianMonths() {
+    const gregorianOfCursor = this.props.app.gregorianOfCursor;
+    if (!gregorianOfCursor.months.length) return '';
+
+    return (
+      <div>
+        <b>
+          {gregorianOfCursor.months.toString().replace(',', '/')}
+          &nbsp;
+          {gregorianOfCursor.year}
+        </b>
+      </div>
+    );
+  }
   render() {
     const calendarView = this.props.app.calendarView;
     return (
@@ -116,7 +130,7 @@ class SimpleLayout extends React.Component {
           <Header style={{ background: '#fff', padding: 0 }}>
             <Row type="flex" justify="space-between">
               <Col span={1} />
-              <Col span={2} />
+              <Col span={1} />
               <Col span={12}>
                 <Button onClick={this.handleGotoToday()}>आज</Button>
                 &nbsp;{' '}
@@ -139,6 +153,12 @@ class SimpleLayout extends React.Component {
                   calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
                     calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
                 )(this.renderMonthChooser())}
+              </Col>
+              <Col span={5}>
+                {renderIf(
+                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
+                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
+                )(this.renderGregorianMonths())}
               </Col>
               <Col span={3}>
                 <Select

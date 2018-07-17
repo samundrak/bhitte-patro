@@ -28,7 +28,7 @@ class App extends Component {
             />{' '}
             <Redirect
               from="*"
-              to={`/calendar/view/year/${today.nepaliYear}/${
+              to={`/calendar/view/month/${today.nepaliYear}/${
                 today.nepaliMonth
               }/${today.nepaliDay}`}
             />
@@ -36,10 +36,6 @@ class App extends Component {
         </Layout>
       </div>
     );
-  }
-
-  componentDidMount() {
-    console.log(NepaliDate.today());
   }
 }
 

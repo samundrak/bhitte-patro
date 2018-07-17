@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ad-bs-converter": "^0.5.0",
     "antd": "^3.6.6",
     "domex": "git+https://github.com/samundrak/domex.git",
     "domex-redux": "git+https://github.com/samundrak/domex-redux.git",

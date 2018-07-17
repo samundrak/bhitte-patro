@@ -7,24 +7,49 @@ import { CALENDAR_VIEW_TYPE } from '../store/state';
 import domex from '../store';
 import calendar from '../data/calendar';
 import Month from '../calendar/Month';
+import NepaliDate from '../core/NepaliDate';
 
 class Calendar extends React.Component {
+  handleUpdateAdMonths() {
+    return (adYears, adMonths) => {
+      domex.resource.post('/update_gregorian_months_local_months', {
+        data: {
+          years: Array.from(adYears),
+          months: Array.from(adMonths),
+        },
+      });
+    };
+  }
   renderCalendarView() {
     const view = this.props.app.calendarView;
     const cursor = this.props.app.cursor;
-
+    const monthIndex = cursor.month - 1;
     const value = data[cursor.year];
     switch (view) {
       case CALENDAR_VIEW_TYPE.YEAR.value:
-        return <YearView key={cursor.year} value={value} year={cursor.year} />;
+        return (
+          <YearView
+            flipAnimation={this.props.app.flipAnimation}
+            today={this.props.app.today}
+            key={cursor.year}
+            value={value}
+            year={cursor.year}
+            cursor={cursor}
+          />
+        );
       case CALENDAR_VIEW_TYPE.MONTH.value:
         return (
           <Month
+            updateAdMonths={this.handleUpdateAdMonths()}
+            flipAnimation={this.props.app.flipAnimation}
+            today={this.props.app.today}
+            cursor={cursor}
             key={`${cursor.year}/${cursor.month}`}
             singleView
-            name={calendar.month.np.long[cursor.month - 1]}
-            weekStart={value[cursor.month - 1][0]}
-            totalDays={value[cursor.month - 1][1]}
+            index={monthIndex}
+            name={calendar.month.np.long[monthIndex]}
+            weekStart={value[monthIndex][0]}
+            totalDays={value[monthIndex][1]}
           />
         );
     }
@@ -32,8 +57,16 @@ class Calendar extends React.Component {
   render() {
     return <div>{this.renderCalendarView()}</div>;
   }
-  componentDidMount(x, y) {
+  componentDidMount() {
     const { year, month, day, view } = this.props.match.params;
+    const np = NepaliDate.today();
+    domex.resource.post('/today', {
+      data: {
+        year: np.nepaliYear,
+        month: np.nepaliMonth,
+        day: np.nepaliDay,
+      },
+    });
     domex.resource.post('/change_cursor', {
       data: {
         date: {

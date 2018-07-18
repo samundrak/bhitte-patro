@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import YearView from '../views/Year';
 import data from '../data/years.json';
 import { CALENDAR_VIEW_TYPE } from '../store/state';
@@ -10,10 +9,6 @@ import Month from '../calendar/Month';
 import NepaliDate from '../core/NepaliDate';
 
 class Calendar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   handleUpdateAdMonths() {
     return (adYears, adMonths) => {
       domex.resource.post('/update_gregorian_months_local_months', {
@@ -59,6 +54,8 @@ class Calendar extends React.Component {
             />
           )
         );
+      default:
+        break;
     }
   }
 

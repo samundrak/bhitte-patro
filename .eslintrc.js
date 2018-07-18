@@ -23,6 +23,8 @@ module.exports = {
     jest: 1,
   },
   rules: {
+    'react/forbid-prop-types': 0,
+    'react/jsx-filename-extension': 0,
     'no-underscore-dangle': 0,
     'no-console': 1,
     'react/react-in-jsx-scope': 1,

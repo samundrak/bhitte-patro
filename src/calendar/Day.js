@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Col } from 'antd';
 import PropTypes from 'prop-types';
 import { replaceNumberWithAnka } from '../utils';
@@ -8,17 +8,17 @@ class Day extends Component {
     const { cursor, today } = this.props;
     if (!cursor || !today) return;
     return (
-      cursor.year === today.year
-      && this.props.month + 1 === today.month
-      && this.props.day.number === today.day
+      cursor.year === today.year &&
+      this.props.month + 1 === today.month &&
+      this.props.day.number === today.day
     );
   }
 
   isSelectedDay() {
-    const { cursor, today } = this.props;
+    const { cursor } = this.props;
     return (
-      this.props.month + 1 === cursor.month
-      && this.props.day.number === cursor.day
+      this.props.month + 1 === cursor.month &&
+      this.props.day.number === cursor.day
     );
   }
 
@@ -70,8 +70,8 @@ class Day extends Component {
         >
           {replaceNumberWithAnka(day.number)}
         </span>
-        {day.ad
-          && singleView && (
+        {day.ad &&
+          singleView && (
             <div
               style={{
                 fontWeight: '400',
@@ -82,7 +82,7 @@ class Day extends Component {
             >
               {day.ad.day}
             </div>
-        )}
+          )}
       </Col>
     );
   }

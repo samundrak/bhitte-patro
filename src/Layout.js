@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import renderIf from 'render-if';
 import {
-  Layout, Menu, Icon, Select, Row, Col, Button,
+  Layout, Select, Row, Col, Button,
 } from 'antd';
 import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from './store/state';
 import { replaceNumberWithAnka } from './utils';
@@ -11,7 +11,7 @@ import calendar from './data/calendar';
 
 const Option = Select.Option;
 
-const { Header, Sider, Content } = Layout;
+const { Header, Content } = Layout;
 const years = [];
 for (let yr = YEAR_RANGE_NEPALI[0]; yr < YEAR_RANGE_NEPALI[1]; yr++) {
   years.push({ yr, local: replaceNumberWithAnka(yr) });
@@ -138,11 +138,11 @@ class SimpleLayout extends React.Component {
       <div>
         <b>
           {months[0]}
-/
+          /
           {years[0]}
           &nbsp;
           {months[1]}
-/
+          /
           {years[1]}
         </b>
       </div>
@@ -162,8 +162,7 @@ class SimpleLayout extends React.Component {
                 <Button onClick={this.handleGotoToday()}>
 आज
                 </Button>
-                &nbsp;
-                {' '}
+                &nbsp;{' '}
                 <Button
                   shape="circle"
                   onClick={this.handleChangeYearCursor('-')}

@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Code from https://github.com/lohanidamodar/react-nepali-date-picker
 /* Length of Gregroian months in a non-leap year */
 const GregorianMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -190,9 +191,9 @@ class NepaliDate {
       otherYear += 1;
     }
     if (
-      month === 2
-      && year % 4 === 0
-      && (year % 100 !== 0 || year % 400 === 0)
+      month === 2 &&
+      year % 4 === 0 &&
+      (year % 100 !== 0 || year % 400 === 0)
     ) {
       otherDay += 1;
     }
@@ -212,9 +213,9 @@ class NepaliDate {
 
   /* Return a String representing the nepali date */
   toDateString() {
-    return (
-      `${this.nepaliYear.toString()}/${this.nepaliMonth}/${this.nepaliDay}`
-    );
+    return `${this.nepaliYear.toString()}/${this.nepaliMonth}/${
+      this.nepaliDay
+    }`;
   }
 
   /* Return a JS Date object for the NepaliDate date. */

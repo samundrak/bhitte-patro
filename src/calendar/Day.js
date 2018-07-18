@@ -30,6 +30,10 @@ class Day extends Component {
         borderBottom: singleView && '#e0e0e0 1px solid',
         borderRight: '#e0e0e0 1px solid',
       });
+    } else {
+      Object.assign(styles, {
+        height: '25px',
+      });
     }
     return (
       <Col
@@ -42,8 +46,8 @@ class Day extends Component {
           borderStyle: 'solid',
           lineHeight: '25px',
           borderColor: '#e8e8e8',
-          ...styles,
           ...this.props.style,
+          ...styles,
         }}
         span={3}
         className={`${!singleView && day.isDay ? 'daySingleView' : ''} 

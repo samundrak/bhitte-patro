@@ -55,13 +55,14 @@ class Day extends Component {
         className={`${!singleView && day.isDay ? 'daySingleView' : ''} 
         ${(isToday && 'today') || ''}
         ${this.isSelectedDay() && !isToday ? 'selection' : ''}
+        fullWidth
         `}
         onClick={this.props.handleDayClick(day)}
       >
         <span
           style={{
             fontWeight: '400',
-            fontSize: (singleView && '50px') || '14px',
+            fontSize: (singleView && '3vw') || '1vw',
             // float: this.props.singleView && 'left',
             paddingTop: this.props.singleView && '20%',
             position: singleView ? 'absolute' : '',

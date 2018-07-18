@@ -33,6 +33,7 @@ class Week extends Component {
               lineHeight: '25px',
               ...styles,
             }}
+            className="fullWidth"
           >
             {!this.props.singleView && (weekDay || '').substring(0, 2)}
             {this.props.singleView && weekDay}

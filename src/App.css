@@ -3522,3 +3522,7 @@ body {
   animation-duration: 0.2s;
   -moz-animation-duration: 0.2s;
 }
+
+.fullWidth{
+  width: calc(100% / 7) !important;
+}

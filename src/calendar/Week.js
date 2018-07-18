@@ -10,6 +10,7 @@ class Week extends Component {
       <Row style={{}}>
         {this.props.data.map((day, index) => (
           <Day
+            style={this.props.dayStyle}
             month={this.props.month}
             cursor={this.props.cursor}
             today={this.props.today}
@@ -27,8 +28,10 @@ class Week extends Component {
 Week.defaultProps = {
   data: [],
   singleView: false,
+  dayStyle: {},
 };
 Week.propTypes = {
+  dayStyle: PropTypes.object,
   today: PropTypes.shape({
     year: PropTypes.number.isRequired,
     month: PropTypes.number.isRequired,

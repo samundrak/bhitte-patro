@@ -11,8 +11,10 @@ class Month extends React.Component {
     super(props);
     this.state = {
       weeks: [],
+      dayStyle: {},
       totalDays: 30,
     };
+    this.monthViewRef = React.createRef();
   }
   createBeautifullWeeks(weekStart, totalDays) {
     const cursor = this.props.cursor;
@@ -25,7 +27,7 @@ class Month extends React.Component {
           .fill(true)
           .map((item, index) => {
             const ad = adbs.bs2ad(
-              `${cursor.year}/${cursor.month}/${index + 1}`
+              `${cursor.year}/${cursor.month}/${index + 1}`,
             );
 
             adYears.add(ad.year);
@@ -36,7 +38,7 @@ class Month extends React.Component {
               month: this.props.index,
               ad,
             };
-          })
+          }),
       );
     const weeks = chunk(days, 7);
     const lastWeek = weeks[weeks.length - 1];
@@ -45,7 +47,7 @@ class Month extends React.Component {
       lastWeek.push(
         ...Array(daysLeft)
           .fill(true)
-          .map((item, index) => ({ isDay: false }))
+          .map((item, index) => ({ isDay: false })),
       );
     }
     if (!this.props.singleView) {
@@ -53,7 +55,7 @@ class Month extends React.Component {
         weeks.push(
           Array(7)
             .fill(true)
-            .map((item, index) => ({ isDay: false }))
+            .map((item, index) => ({ isDay: false })),
         );
       }
     }
@@ -72,47 +74,60 @@ class Month extends React.Component {
 
   render() {
     return (
-      <Row
-        style={this.getStyle()}
-        className={`animated lessAnimation ${
-          this.props.singleView ? this.props.flipAnimation : ''
-        }`}
-      >
-        {!this.props.singleView && (
+      <div ref={this.monthViewRef}>
+        <Row
+          style={this.getStyle()}
+          className={`animated lessAnimation ${
+            this.props.singleView ? this.props.flipAnimation : ''
+          }`}
+        >
+          {!this.props.singleView && (
+            <Row>
+              <Col span={8} />
+              <Col span={8}>{this.props.name}</Col>
+              <Col span={8} />
+            </Row>
+          )}
+          <WeekHeader singleView={this.props.singleView} />
           <Row>
-            <Col span={8} />
-            <Col span={8}>{this.props.name}</Col>
-            <Col span={8} />
+            {this.state.weeks.map((week, index) => (
+              <Week
+                dayStyle={this.state.dayStyle}
+                month={this.props.index}
+                today={this.props.today}
+                cursor={this.props.cursor}
+                handleDayClick={this.props.handleDayClick}
+                singleView={this.props.singleView}
+                data={week}
+                count={index}
+                key={index}
+              />
+            ))}
           </Row>
-        )}
-        <WeekHeader singleView={this.props.singleView} />
-        <Row>
-          {this.state.weeks.map((week, index) => (
-            <Week
-              month={this.props.index}
-              today={this.props.today}
-              cursor={this.props.cursor}
-              handleDayClick={this.props.handleDayClick}
-              singleView={this.props.singleView}
-              data={week}
-              count={index}
-              key={index}
-            />
-          ))}
         </Row>
-      </Row>
+      </div>
     );
   }
   componentDidMount() {
     const { weeks, adMonths, adYears } = this.createBeautifullWeeks(
       this.props.weekStart,
-      this.props.totalDays
+      this.props.totalDays,
     );
     if (this.props.singleView) {
       this.props.updateAdMonths(adYears, adMonths);
     }
+    let dayStyle = this.state.dayStyle;
+    if (this.monthViewRef.current) {
+      const el = this.monthViewRef.current;
+      const { y } = el.getBoundingClientRect();
+      const heightPerDay = window.innerHeight - (y + 50);
+      dayStyle = {
+        height: `${heightPerDay / weeks.length}px`,
+      };
+    }
     this.setState({
       weeks,
+      dayStyle,
     });
   }
 }

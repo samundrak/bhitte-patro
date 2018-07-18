@@ -26,7 +26,6 @@ class Day extends Component {
     const { day, singleView } = this.props;
     if (this.props.singleView) {
       Object.assign(styles, {
-        height: '130px',
         padding: '10px',
         borderBottom: singleView && '#e0e0e0 1px solid',
         borderRight: '#e0e0e0 1px solid',
@@ -44,6 +43,7 @@ class Day extends Component {
           lineHeight: '25px',
           borderColor: '#e8e8e8',
           ...styles,
+          ...this.props.style,
         }}
         span={3}
         className={`${!singleView && day.isDay ? 'daySingleView' : ''} 
@@ -85,8 +85,10 @@ class Day extends Component {
 Day.defaultProps = {
   day: {},
   singleView: false,
+  style: {},
 };
 Day.propTypes = {
+  style: PropTypes.object,
   month: PropTypes.number.isRequired,
   today: PropTypes.shape({
     year: PropTypes.number.isRequired,

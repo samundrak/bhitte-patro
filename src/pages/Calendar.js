@@ -10,6 +10,9 @@ import Month from '../calendar/Month';
 import NepaliDate from '../core/NepaliDate';
 
 class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   handleUpdateAdMonths() {
     return (adYears, adMonths) => {
       domex.resource.post('/update_gregorian_months_local_months', {
@@ -39,23 +42,25 @@ class Calendar extends React.Component {
         );
       case CALENDAR_VIEW_TYPE.MONTH.value:
         return (
-          <Month
-            updateAdMonths={this.handleUpdateAdMonths()}
-            flipAnimation={this.props.app.flipAnimation}
-            today={this.props.app.today}
-            cursor={cursor}
-            key={`${cursor.year}/${cursor.month}`}
-            singleView
-            index={monthIndex}
-            name={calendar.month.np.long[monthIndex]}
-            weekStart={value[monthIndex][0]}
-            totalDays={value[monthIndex][1]}
-          />
+          monthIndex > -1 && (
+            <Month
+              updateAdMonths={this.handleUpdateAdMonths()}
+              flipAnimation={this.props.app.flipAnimation}
+              today={this.props.app.today}
+              cursor={cursor}
+              key={`${cursor.year}/${cursor.month}`}
+              singleView
+              index={monthIndex}
+              name={calendar.month.np.long[monthIndex]}
+              weekStart={value[monthIndex][0]}
+              totalDays={value[monthIndex][1]}
+            />
+          )
         );
     }
   }
   render() {
-    return <div>{this.renderCalendarView()}</div>;
+    return <div ref={this.monthViewRef}>{this.renderCalendarView()}</div>;
   }
   componentDidMount() {
     const { year, month, day, view } = this.props.match.params;
@@ -83,7 +88,7 @@ class Calendar extends React.Component {
     });
   }
 }
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   app: state.app,
 });
 export default connect(mapStateToProps)(Calendar);

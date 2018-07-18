@@ -23,5 +23,5 @@ export default {
     month: 0,
     day: 0,
   },
-  calendarView: CALENDAR_VIEW_TYPE.YEAR.value,
+  calendarView: CALENDAR_VIEW_TYPE.MONTH.value,
 };

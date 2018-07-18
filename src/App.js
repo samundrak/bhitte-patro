@@ -15,6 +15,7 @@ class App extends Component {
       today: NepaliDate.today(),
     };
   }
+
   render() {
     const { today } = this.state;
     return (
@@ -39,7 +40,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   app: state.app,
 });
 export default withRouter(connect(mapStateToProps)(App));

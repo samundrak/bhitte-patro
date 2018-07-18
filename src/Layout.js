@@ -1,11 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import renderIf from 'render-if';
+import {
+  Layout, Menu, Icon, Select, Row, Col, Button,
+} from 'antd';
 import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from './store/state';
-import { Layout, Menu, Icon, Select, Row, Col, Button } from 'antd';
 import { replaceNumberWithAnka } from './utils';
 import NepaliDate from './core/NepaliDate';
 import calendar from './data/calendar';
+
 const Option = Select.Option;
 
 const { Header, Sider, Content } = Layout;
@@ -23,6 +26,7 @@ class SimpleLayout extends React.Component {
       collapsed: !this.state.collapsed,
     });
   };
+
   handleChangeYearCursor(step) {
     return (value) => {
       this.changeCursorYear({
@@ -32,6 +36,7 @@ class SimpleLayout extends React.Component {
       });
     };
   }
+
   handleChangeMonthCursor(step) {
     return (value) => {
       this.changeCursorYear({
@@ -41,6 +46,7 @@ class SimpleLayout extends React.Component {
       });
     };
   }
+
   changeCursorYear(data) {
     this.props.domex.resource
       .patch('/change_cursor', {
@@ -54,6 +60,7 @@ class SimpleLayout extends React.Component {
         this.props.history.push(route);
       });
   }
+
   handleChangeCalendarView() {
     return (view) => {
       const { year, month, day } = this.props.app.cursor;
@@ -64,6 +71,7 @@ class SimpleLayout extends React.Component {
       });
     };
   }
+
   renderYearChooser() {
     return (
       <Select
@@ -71,7 +79,7 @@ class SimpleLayout extends React.Component {
         showSearch
         onChange={this.handleChangeYearCursor()}
       >
-        {years.map((item) => (
+        {years.map(item => (
           <Option value={item.yr} key={item.yr}>
             {item.local}
           </Option>
@@ -79,6 +87,7 @@ class SimpleLayout extends React.Component {
       </Select>
     );
   }
+
   renderMonthChooser() {
     const months = calendar.month.np.long;
     return (
@@ -96,6 +105,7 @@ class SimpleLayout extends React.Component {
       </Select>
     );
   }
+
   handleGotoToday() {
     return () => {
       const np = NepaliDate.today();
@@ -108,6 +118,7 @@ class SimpleLayout extends React.Component {
       });
     };
   }
+
   renderGregorianMonths() {
     const { months, years } = this.props.app.gregorianOfCursor;
     if (!months.length) return '';
@@ -126,13 +137,18 @@ class SimpleLayout extends React.Component {
     return (
       <div>
         <b>
-          {months[0]}/{years[0]}
+          {months[0]}
+/
+          {years[0]}
           &nbsp;
-          {months[1]}/{years[1]}
+          {months[1]}
+/
+          {years[1]}
         </b>
       </div>
     );
   }
+
   render() {
     const calendarView = this.props.app.calendarView;
     return (
@@ -143,8 +159,11 @@ class SimpleLayout extends React.Component {
               <Col span={1} />
               <Col span={1} />
               <Col span={12}>
-                <Button onClick={this.handleGotoToday()}>आज</Button>
-                &nbsp;{' '}
+                <Button onClick={this.handleGotoToday()}>
+आज
+                </Button>
+                &nbsp;
+                {' '}
                 <Button
                   shape="circle"
                   onClick={this.handleChangeYearCursor('-')}
@@ -161,14 +180,14 @@ class SimpleLayout extends React.Component {
                 &nbsp;
                 {this.renderYearChooser()}
                 {renderIf(
-                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
-                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
+                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value
+                    && calendarView !== CALENDAR_VIEW_TYPE.YEAR.value,
                 )(this.renderMonthChooser())}
               </Col>
               <Col span={5}>
                 {renderIf(
-                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
-                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
+                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value
+                    && calendarView !== CALENDAR_VIEW_TYPE.YEAR.value,
                 )(this.renderGregorianMonths())}
               </Col>
               <Col span={3}>
@@ -177,7 +196,7 @@ class SimpleLayout extends React.Component {
                   style={{ width: 120 }}
                   onChange={this.handleChangeCalendarView()}
                 >
-                  {Object.keys(CALENDAR_VIEW_TYPE).map((item) => (
+                  {Object.keys(CALENDAR_VIEW_TYPE).map(item => (
                     <Option
                       value={CALENDAR_VIEW_TYPE[item].value}
                       key={CALENDAR_VIEW_TYPE[item].value}

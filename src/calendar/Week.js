@@ -5,6 +5,7 @@ import Day from './Day';
 
 class Week extends Component {
   static DAYS_COUNT = Array(7).fill(true);
+
   render() {
     return (
       <Row style={{}}>

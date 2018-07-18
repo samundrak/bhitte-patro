@@ -8,12 +8,14 @@ import domex from '../store';
 
 class Year extends React.Component {
   static MONTHS = calendar.month.np;
+
   constructor(props) {
     super(props);
     this.handleDayClick = this.handleDayClick.bind(this);
   }
+
   handleDayClick(month) {
-    return (day) => () => {
+    return day => () => {
       domex.resource
         .patch('/change_cursor', {
           data: {
@@ -37,6 +39,7 @@ class Year extends React.Component {
         });
     };
   }
+
   render() {
     return (
       <Row>

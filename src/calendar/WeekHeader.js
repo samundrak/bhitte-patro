@@ -6,6 +6,7 @@ import calendar from '../data/calendar';
 const { week } = calendar;
 class Week extends Component {
   static TOTAL_DAYS = 7;
+
   render() {
     const styles = {};
     if (this.props.singleView) {
@@ -18,7 +19,7 @@ class Week extends Component {
     }
     return (
       <Row style={{}}>
-        {week.np[this.props.short ? 'short' : 'long'].map((weekDay) => (
+        {week.np[this.props.short ? 'short' : 'long'].map(weekDay => (
           <Col
             key={weekDay}
             span={3}

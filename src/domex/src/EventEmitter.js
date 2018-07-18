@@ -30,7 +30,7 @@ class EventEmitter {
   emit(eventType, data = {}) {
     const regular = this.listeners.get('regular');
     if (!regular) return;
-    (regular.get(eventType) || []).forEach(listener => {
+    (regular.get(eventType) || []).forEach((listener) => {
       listener({ ...data, eventType });
     });
   }

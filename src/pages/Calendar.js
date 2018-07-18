@@ -13,6 +13,7 @@ class Calendar extends React.Component {
   constructor(props) {
     super(props);
   }
+
   handleUpdateAdMonths() {
     return (adYears, adMonths) => {
       domex.resource.post('/update_gregorian_months_local_months', {
@@ -23,6 +24,7 @@ class Calendar extends React.Component {
       });
     };
   }
+
   renderCalendarView() {
     const view = this.props.app.calendarView;
     const cursor = this.props.app.cursor;
@@ -59,11 +61,19 @@ class Calendar extends React.Component {
         );
     }
   }
+
   render() {
-    return <div ref={this.monthViewRef}>{this.renderCalendarView()}</div>;
+    return (
+      <div ref={this.monthViewRef}>
+        {this.renderCalendarView()}
+      </div>
+    );
   }
+
   componentDidMount() {
-    const { year, month, day, view } = this.props.match.params;
+    const {
+      year, month, day, view,
+    } = this.props.match.params;
     const np = NepaliDate.today();
     domex.resource.post('/today', {
       data: {

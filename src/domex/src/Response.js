@@ -4,6 +4,7 @@ class Response {
     this._isResponseSent = false;
     this._responseData = null;
   }
+
   status(status = 200) {
     this._statusCode = status;
     return this;
@@ -12,6 +13,7 @@ class Response {
   sendStatus(...args) {
     return this._response(...args);
   }
+
   send(...args) {
     return this._response(...args);
   }
@@ -35,12 +37,15 @@ class Response {
   getResponseData() {
     return this._responseData;
   }
+
   setResponseSent(_isResponseSent) {
     this._isResponseSent = _isResponseSent;
   }
+
   getStatus() {
     return this._statusCode;
   }
+
   setResolver(resolver) {
     this._responseResolver = resolver;
   }

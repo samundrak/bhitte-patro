@@ -171,9 +171,9 @@ class NepaliDate {
     if (!date) {
       return undefined;
     }
-    let year = date.getFullYear();
-    let month = date.getMonth();
-    let day = date.getDate();
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
 
     let nepaliYear = year + 56;
     let nepaliMonth = month + 8;
@@ -190,9 +190,9 @@ class NepaliDate {
       otherYear += 1;
     }
     if (
-      month === 2 &&
-      year % 4 === 0 &&
-      (year % 100 !== 0 || year % 400 === 0)
+      month === 2
+      && year % 4 === 0
+      && (year % 100 !== 0 || year % 400 === 0)
     ) {
       otherDay += 1;
     }
@@ -213,7 +213,7 @@ class NepaliDate {
   /* Return a String representing the nepali date */
   toDateString() {
     return (
-      this.nepaliYear.toString() + '/' + this.nepaliMonth + '/' + this.nepaliDay
+      `${this.nepaliYear.toString()}/${this.nepaliMonth}/${this.nepaliDay}`
     );
   }
 
@@ -240,10 +240,10 @@ class NepaliDate {
     }
     match = /^(\d{1,2})\/(\d{1,2})$/.exec(v);
     if (match) {
-      let nd = NepaliDate.today();
+      const nd = NepaliDate.today();
       let y = nd.nepaliYear;
-      let m = match[1];
-      let d = match[2];
+      const m = match[1];
+      const d = match[2];
       if (m > nd.nepaliMonth || (m === nd.nepaliMonth && d > nd.nepaliDay)) {
         y -= 1;
       }

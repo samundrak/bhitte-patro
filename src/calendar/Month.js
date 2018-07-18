@@ -16,10 +16,11 @@ class Month extends React.Component {
     };
     this.monthViewRef = React.createRef();
   }
+
   createBeautifullWeeks(weekStart, totalDays) {
     const cursor = this.props.cursor;
     const adMonths = new Set();
-    let adYears = new Set();
+    const adYears = new Set();
     const days = Array(weekStart)
       .fill({ isDay: false })
       .concat(
@@ -61,6 +62,7 @@ class Month extends React.Component {
     }
     return { weeks, adMonths, adYears };
   }
+
   getStyle() {
     if (this.props.singleView) {
       return {
@@ -84,7 +86,9 @@ class Month extends React.Component {
           {!this.props.singleView && (
             <Row>
               <Col span={8} />
-              <Col span={8}>{this.props.name}</Col>
+              <Col span={8}>
+                {this.props.name}
+              </Col>
               <Col span={8} />
             </Row>
           )}
@@ -108,6 +112,7 @@ class Month extends React.Component {
       </div>
     );
   }
+
   componentDidMount() {
     const { weeks, adMonths, adYears } = this.createBeautifullWeeks(
       this.props.weekStart,

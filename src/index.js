@@ -13,7 +13,7 @@ ReactDOM.render(
       <App domex={domex} />
     </BrowserRouter>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 registerServiceWorker();

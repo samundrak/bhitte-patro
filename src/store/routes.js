@@ -1,5 +1,6 @@
 import calendarCursor from './controller/calendarCursor';
-export default function(router) {
+
+export default function (router) {
   return router
     .post('/change_year_cursor', async (req, res) => {
       res.json({});

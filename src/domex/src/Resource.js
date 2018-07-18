@@ -9,17 +9,16 @@ class Resource extends EventEmitter {
     this.doxpress = doxpress;
     this._routers = routers;
     Object.values(Router.METHODS).forEach((method) => {
-      this[method] = (route, options) => {
-        return this._execute(method, route, options);
-      };
+      this[method] = (route, options) => this._execute(method, route, options);
     });
   }
+
   synchronousPromiseResolver(promises, onEachResolve = () => null) {
     const copyOfPromises = [...promises];
     const promisesAnswer = [];
 
     return new Promise((resolve, reject) => {
-      const prResolver = function(promise, index = 0) {
+      const prResolver = function (promise, index = 0) {
         if (!promises.length || !promise) {
           return resolve(promisesAnswer);
         }
@@ -37,6 +36,7 @@ class Resource extends EventEmitter {
       prResolver(copyOfPromises.shift());
     });
   }
+
   _execute(method, route, options = {}) {
     return new Promise((resolve, reject) => {
       const { data = {}, params = {} } = options;
@@ -51,15 +51,13 @@ class Resource extends EventEmitter {
       response.setResolver(resolve);
       request.body = data;
       request.query = params;
-      const router = this._routers.find((router) =>
-        router.hasRoute(method, route)
-      );
+      const router = this._routers.find(router => router.hasRoute(method, route));
       if (!router) {
         return reject(new Error(`Error: ${route} not found`));
       }
       const handlers = router.getHandlers(method, route);
       this.synchronousPromiseResolver(
-        handlers.map((handler) => () => handler(request, response)),
+        handlers.map(handler => () => handler(request, response)),
         (err, result, index) => {
           this.emit('handle:executed', {
             err,
@@ -73,7 +71,7 @@ class Resource extends EventEmitter {
           });
           // on every promise resolve or on rejectction
           // console.log(result);
-        }
+        },
       ).catch((err) => {
         reject(err);
         this.emit('handle:executed', {

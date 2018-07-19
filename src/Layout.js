@@ -1,9 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import renderIf from 'render-if';
-import {
-  Layout, Select, Row, Col, Button,
-} from 'antd';
+import throttle from 'lodash.throttle';
+import { Layout, Select, Row, Col, Button } from 'antd';
 import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from './store/state';
 import { replaceNumberWithAnka } from './utils';
 import NepaliDate from './core/NepaliDate';
@@ -79,7 +78,7 @@ class SimpleLayout extends React.Component {
         showSearch
         onChange={this.handleChangeYearCursor()}
       >
-        {years.map(item => (
+        {years.map((item) => (
           <Option value={item.yr} key={item.yr}>
             {item.local}
           </Option>
@@ -159,9 +158,7 @@ class SimpleLayout extends React.Component {
               <Col span={1} />
               <Col span={1} />
               <Col span={12}>
-                <Button onClick={this.handleGotoToday()}>
-आज
-                </Button>
+                <Button onClick={this.handleGotoToday()}>आज</Button>
                 &nbsp;{' '}
                 <Button
                   shape="circle"
@@ -179,14 +176,14 @@ class SimpleLayout extends React.Component {
                 &nbsp;
                 {this.renderYearChooser()}
                 {renderIf(
-                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value
-                    && calendarView !== CALENDAR_VIEW_TYPE.YEAR.value,
+                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
+                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
                 )(this.renderMonthChooser())}
               </Col>
               <Col span={5}>
                 {renderIf(
-                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value
-                    && calendarView !== CALENDAR_VIEW_TYPE.YEAR.value,
+                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
+                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
                 )(this.renderGregorianMonths())}
               </Col>
               <Col span={3}>
@@ -195,7 +192,7 @@ class SimpleLayout extends React.Component {
                   style={{ width: 120 }}
                   onChange={this.handleChangeCalendarView()}
                 >
-                  {Object.keys(CALENDAR_VIEW_TYPE).map(item => (
+                  {Object.keys(CALENDAR_VIEW_TYPE).map((item) => (
                     <Option
                       value={CALENDAR_VIEW_TYPE[item].value}
                       key={CALENDAR_VIEW_TYPE[item].value}
@@ -222,6 +219,37 @@ class SimpleLayout extends React.Component {
         </Layout>
       </Layout>
     );
+  }
+
+  handleMouseWheel(event) {
+    if (this.props.app.calendarView !== CALENDAR_VIEW_TYPE.MONTH.value) {
+      return;
+    }
+    if (event.deltaY < 0) {
+      this.handleChangeMonthCursor('-')(event);
+    } else {
+      this.handleChangeMonthCursor('+')(event);
+    }
+  }
+  handleKeyDown(event) {
+    switch (event.key) {
+      case 'ArrowLeft':
+        this.handleChangeMonthCursor('-')(event);
+        break;
+      case 'ArrowRight':
+        this.handleChangeMonthCursor('+')(event);
+        break;
+      case 'Enter':
+        this.handleGotoToday()();
+        break;
+    }
+  }
+  componentDidMount() {
+    document.body.addEventListener(
+      'mousewheel',
+      throttle(this.handleMouseWheel.bind(this), 300)
+    );
+    document.body.addEventListener('keyup', this.handleKeyDown.bind(this));
   }
 }
 export default withRouter(SimpleLayout);

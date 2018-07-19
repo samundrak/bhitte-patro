@@ -22,7 +22,7 @@ class App extends Component {
     const { today } = this.state;
     const { domex, app } = this.props;
     return (
-      <div className="App">
+      <div className="App" >
         <Layout app={app} domex={domex}>
           <Switch>
             <Route
@@ -42,6 +42,8 @@ class App extends Component {
       </div>
     );
   }
+
+
 }
 
 const mapStateToProps = state => ({

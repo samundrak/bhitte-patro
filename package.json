@@ -8,6 +8,7 @@
     "domex": "git+https://github.com/samundrak/domex.git",
     "domex-redux": "git+https://github.com/samundrak/domex-redux.git",
     "lodash.chunk": "^4.2.0",
+    "lodash.throttle": "^4.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

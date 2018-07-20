@@ -1,0 +1,2990 @@
+[
+  {
+    "month": 1,
+    "days": [
+      {
+        "isHoliday": true,
+        "tithi": "त्रयोदशी",
+        "event": "नयाँ वर्ष / मेष संक्रान्ति / बिस्का जात्रा",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "14"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "आमाको मुख हेर्ने दिन",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "16"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "अक्षय तृतीया / परशुराम जयन्ती / विश्व सम्पदा दिवस",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "श्री शंकराचार्य जयन्ती",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "छन्द दिवस",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "पृथ्वी दिवस",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "अन्तर्राष्ट्रिय पुस्तक दिवस / प्रतिलिपि अधिकार दिवस",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "लोकतन्त्र दिवस / सीता जयन्ती",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "विश्व औंलो दिवस / विसं २०७२ सालको महाभुकम्पको सम्झना",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "मोहिनी एकादशी व्रत / विश्व बौद्धिक सम्पत्ति दिवस",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "नृसिंह दिवस / काममा सुरक्षा र स्वास्थ्यको लागि विश्व दिवस",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "विश्व नृत्य दिवस",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "29"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "पूर्णिमा",
+        "event": "बुद्ध जयन्ती / उभौली पर्व / चण्डेश्वरी जात्रा",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "30"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "प्रतिपदा",
+        "event": "अन्तर्राष्ट्रिय श्रमिक दिवस",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "विश्व प्रेस स्वतन्त्रता दिवस",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "विश्व हाँसाे दिवस",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "किराँत समाज सुधार दिवस",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "विश्व रेडक्रस दिवस",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "कानून दिवस",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "अपरा एकादशी / चित्तधर हृदय जन्मजयन्ती",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "विश्व नर्स दिवस",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "12"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "त्रयोदशी",
+        "event": "भोटो जात्रा",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "सिथि चःह्रे",
+        "day": "३१",
+        "dayInEn": "31",
+        "en": "14"
+      }
+    ]
+  },
+  {
+    "month": 2,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event":
+          "वृष संक्रान्ति/ अन्तर्राष्ट्रिय परिवार दिवस / मुसलमान समुदायकाे पावन रमदान महिना शुरू",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "मलमास शुरू / मत्स्यनारायण मेला शुरू",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "16"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "विश्व दूरसञ्चार दिवस / विश्व उच्च रक्तचाप दिवस",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "जैविक विविधता दिवस",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "पद्मिनी एकादशी व्रत",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पूर्णिमा",
+        "event": "गणतन्त्र दिवस",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "विश्व धुम्रपान रहित दिवस",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "31"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "विश्व बुवाआमा दिवस / वन उपभोक्ता दिवस",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "निर्दोष बालबालिका माथि अत्याचार विरुद्धको दिवस",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "विश्व वातावरण दिवस",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "परमा एकादशी व्रत",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "विश्व बालश्रम विरुद्ध दिवस",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "मलमास समाप्ति / मत्स्यनारायण मेला समाप्ति",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "विश्व रक्तदाता दिवस",
+        "day": "३१",
+        "dayInEn": "31",
+        "en": "14"
+      }
+    ]
+  },
+  {
+    "month": 3,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "मिथुन संक्रान्ति / विश्व अग्रज दुर्व्यवहार जागरुकता दिवस",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "16"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "विश्व खडेरी विरुद्ध संघर्ष दिवस",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "युग कवि शिद्धिचरण श्रेष्ठ जन्म जयन्ती",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event":
+          "द्वन्द्वमा यौन हिंसाको उन्मूलनको लागि अन्तर्राष्ट्रिय दिवस / सिथि नखः",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "विश्व शरणार्थी दिवस",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "विश्व योग दिवस / संगीत दिवस",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "--",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "निर्जला एकादशी व्रत",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "अन्तर्राष्ट्रिय लागू पदार्थ तथा अवैध तस्करी विरुद्ध दिवस",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पूर्णिमा",
+        "event": "ज्या: पुन्हि",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "दहीचिउरा खाने दिन / राष्ट्रिय धान दिवस",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "विश्व खेलकुद पत्रकार दिवस",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "अन्तर्राष्ट्रिय सहकारी दिवस",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "योगिनी एकादशी व्रत",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "विश्व जनसंख्या दिवस",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "भानु जयन्ती",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "14"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "विश्व युवा दक्षता दिवस",
+        "day": "३१",
+        "dayInEn": "31",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "३२",
+        "dayInEn": "32",
+        "en": "16"
+      }
+    ]
+  },
+  {
+    "month": 4,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "कर्कट सङ्क्रान्ति / लुतो फाल्ने दिन",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "हरिशयनी एकादशी व्रत",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "--",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पूर्णिमा",
+        "event": "गुरु पूर्णिमा",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "विश्व हेपाटाइटिस दिवस",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "विश्व बाघ दिवस",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "अन्तर्राष्ट्रिय मानव बेचबिखन विरुद्ध दिवस",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "खीर खाने दिन",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "31"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "विश्व स्तनपान सप्ताह प्रारम्भ",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "अन्तर्राष्ट्रिय मित्रता दिवस",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "कामिका एकादशी व्रत",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "अन्तर्राष्ट्रिय आदिवासी दिवस",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "गथांमुगः चःह्रे",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "अन्तर्राष्ट्रिय युवा दिवस / गुंला धर्म आरम्भ",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "14"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "नाग पञ्चमी",
+        "day": "३१",
+        "dayInEn": "31",
+        "en": "16"
+      }
+    ]
+  },
+  {
+    "month": 5,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "सिंह संक्रान्ति / तुल्सीदास जयन्ती",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "विश्व मानवअधिकार दिवस",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "--",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "पुत्रदा एकादशी व्रत",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "अन्तर्राष्ट्रिय दास व्यापार र उन्मूलन दिवस",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "राष्ट्रिय धर्मसभा दिवस / अन्तर्राष्ट्रिय लैगिंक समानता दिवस",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पूर्णिमा",
+        "event": "जनै पूर्णिमा / रक्षा बन्धन",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "26"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "प्रतिपदा",
+        "event": "गाईजात्रा (काठमाडौँ उपत्यका मात्र)",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "विश्व आणविक परिक्षण विरुद्धको दिवस",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "विश्व बेपत्ता विरुद्धको दिवस",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "31"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "1"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "सप्तमी",
+        "event": "श्रीकृष्ण जन्माष्टमी",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "2"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "अष्टमी",
+        "event": "गौरा पर्व",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "अजा एकादशी व्रत",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "निजामती दिवस",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "अन्तर्राष्ट्रिय साक्षरता दिवस / विश्व फिजियोथेरापी दिवस",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "कुशे औंसी / बुबाको मुख हेर्ने दिन / मोतीराम जन्मजयन्ती",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "विश्व आत्महत्या रोकथाम दिवस / गुंला धर्म समाप्ति",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "11"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "तृतिया",
+        "event": "हरितालिका तीज (महिला बिदा) / प्रार्थमिक उपचार दिवस",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "गणेश चतुर्थी",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "ऋषि पञ्चमी (महिला बिदा) / राष्ट्रिय बाल दिवस",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "14"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "विश्व ओजोन तह बचाउ दिवस",
+        "day": "३१",
+        "dayInEn": "31",
+        "en": "16"
+      }
+    ]
+  },
+  {
+    "month": 6,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "विश्वकर्मा पूजा / कन्या संक्रान्ति / राष्ट्रिय चलचित्र दिवस",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "18"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "दशमी",
+        "event": "संविधान दिवस",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "हरिपरिवर्तिनी एकादशी व्रत",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "विश्व शान्ति दिवस / विश्व अल्जाइमर्स दिवस",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "सामाजिक दिवस",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "अन्तर्राष्ट्रिय सांकेतिक भाषा दिवस",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "23"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "चतुर्दशी",
+        "event": "ईन्द्रजात्रा (काठमाडौँ बिदा)",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पूर्णिमा",
+        "event": "सोह्र श्राद्ध आरम्भ",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "विश्व पर्यटन दिवस",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event":
+          "विश्व रेबिज विरुद्ध दिवस / अन्तर्राष्ट्रिय सूचनामा विश्वव्यापी पहुँचको दिवस",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "विश्व मुटु दिवस",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "अन्तर्राष्ट्रिय ज्येष्ठ नागरिक दिवस / विश्व बसोबास दिवस",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "1"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "अष्टमी",
+        "event": "जितिया पर्व (महिला मात्र) / विश्व अहिंसा दिवस",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "विश्व पशु दिवस",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "इन्दिरा एकादशी व्रत / विश्व शिक्षक दिवस / विश्व मुस्कान दिवस",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "विश्व हुलाक दिवस",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "घटस्थापना / विश्व मानसिक स्वास्थ्य दिवस",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "गैर आवासीय नेपाली दिवस / अन्तर्राष्ट्रिय बालिका दिवस",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "विश्व दृष्टि दिवस",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "विश्व प्राकृतिक प्रकोप नियन्त्रण दिवस",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "14"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "अन्तर्राष्ट्रिय ग्रामीण महिला दिवस / विश्व हातधुने दिवस",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "15"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "सप्तमी",
+        "event": "फूलपाती / विश्व खाद्य दिवस",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "16"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "अष्टमी",
+        "event": "महाअष्टमी / अन्तर्राष्ट्रिय गरिबी निवारण दिवस",
+        "day": "३१",
+        "dayInEn": "31",
+        "en": "17"
+      }
+    ]
+  },
+  {
+    "month": 7,
+    "days": [
+      {
+        "isHoliday": true,
+        "tithi": "नवमी",
+        "event": "महानवमी / तुला संक्रान्ति",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "18"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "दशमी",
+        "event": "विजया दशमी",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "19"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "एकादशी",
+        "event": "पापांकुशा एकादशी व्रत",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "द्वादशी",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पूर्णिमा",
+        "event":
+          "कोजाग्रत पूर्णिमा / संयुक्त राष्ट्रसंघ दिवस / सशस्त्र प्रहरी दिवस / विश्व विकास सूचना दिवस",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "31"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "रमा एकादशी",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "काग तिहार",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "कुकुर तिहार",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "6"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "औंसी",
+        "event": "लक्ष्मी पुजा / महाकवी लक्ष्मीप्रसाद देवकोटाको जन्म जयन्ती",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "7"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "प्रतिपदा",
+        "event":
+          "गोवर्धन पूजा / म्ह: पूजा / नेपाल सम्वत ११३९ / विश्व रेडियोग्राफी दिवस",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "8"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "द्वितीया",
+        "event": "भाई टिका / किजा पूजा / विश्व स्वतन्त्रता दिवस",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "फल्गुनानद जयन्ती (किराँत धर्मावलम्वीहरुलाई मात्र)",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "12"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "षष्ठी",
+        "event": "छठ पर्व",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "विश्व मधुमेह दिवस",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "14"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "अन्तर्राष्ट्रिय सहनशीलता दिवस / विश्व दर्शन दिवस",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "16"
+      }
+    ]
+  },
+  {
+    "month": 8,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "वृश्चिक संक्रान्ति / विद्यार्थी दिवस",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "हरिबोधिनी एकादशी व्रत / विश्व शौचालय दिवस",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "तुलसी विवाह / अन्तर्राष्ट्रिय बाल दिवस",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "विश्व टेलिभिजन दिवस",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "22"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "पूर्णिमा",
+        "event": "गुरु नानक जयन्ती (शिख धर्मावलम्वीहरुलाई मात्र)",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "अन्तर्राष्ट्रिय महिला हिंसा अन्त्य दिवस",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "विश्व एड्स दिवस",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "अन्तर्राष्ट्रिय दासता उन्मूलन दिवस",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "2"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "एकादशी",
+        "event":
+          "अन्तर्राष्ट्रिय अपाङ्ग दिवस (अपाङ्गता भएका कर्मचारी मात्र) / उत्पतिका एकादशी",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "अन्तर्राष्ट्रिय स्वयंसेवक दिवस / विश्व माटो दिवस",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "बाला चतुर्दशी",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "अन्तर्राष्ट्रिय नागरिक उड्डयन दिवस",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "अन्तर्राष्ट्रिय भ्रष्टाचार विरुद्ध दिवस",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "अन्तर्राष्ट्रिय मानव अधिकार दिवस",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "अन्तर्राष्ट्रिय पर्वत दिवस",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "विवाह पञ्चमी / अन्तर्राष्ट्रिय तटस्थ दिवस",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "14"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "15"
+      }
+    ]
+  },
+  {
+    "month": 9,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "धनु संक्रान्ति",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "16"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "मोक्षदा एकादशी / अन्तर्राष्ट्रिय आप्रवासी दिवस",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "--",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "अन्तर्राष्ट्रिय मानव एकता दिवस",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "राष्ट्रिय यौनिक तथा लैङ्गिक अल्पसंख्यक दिवस",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "21"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "पूर्णिमा",
+        "event": "धान्य पूर्णिमा / उधौली पर्व / योमरी पुन्हि",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "24"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "तृतिया",
+        "event": "क्रिसमस-डे ( इसाई धर्मावलम्वीलाइ मात्र )",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "29"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "नवमी",
+        "event": "तमु ल्होसार",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "राष्ट्रिय मेलमिलाप दिवस",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "31"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "सन् २०१९ आरम्भ / सफला एकादशी",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "श्री गुरु गोविन्द सिंह जयन्ती",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "5"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "औंसी",
+        "event": "तोल ल्होसार",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "नेपाल ज्योतिष परिषद स्थापना दिवस",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "पृथ्वी जयन्ती / राष्ट्रिय एकता दिवस",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "14"
+      }
+    ]
+  },
+  {
+    "month": 10,
+    "days": [
+      {
+        "isHoliday": true,
+        "tithi": "नवमी",
+        "event": "मकर संक्रान्ति / माघे संक्रान्ति / घ्यु चाकु खाने दिन",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "राष्ट्रिय भुकम्प सुरक्षा दिवस",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "16"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "पुत्रदा एकादशी",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पूर्णिमा",
+        "event": "श्री स्वस्थानी व्रत कथा प्रारम्भ / आर्य दिवस / माघ स्नान",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "--",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "अन्तर्राष्ट्रिय भन्सार दिवस",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "विश्व कुष्ठरोग दिवस",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "नेपाल नर्सिङ्ग दिवस",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "शहीद दिवस",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "--",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "31"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "विश्व सिमसार दिवस",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "विश्व क्यान्सर दिवस",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "4"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "प्रतिपदा",
+        "event": "सोनाम ल्होसार",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "--",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "सरस्वती पूजा (शिक्षणसंस्था बिदा)",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "अन्तर्राष्ट्रिय विज्ञान महिला पहुँच दिवस",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "12"
+      }
+    ]
+  },
+  {
+    "month": 11,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "कुम्भ संक्रान्ति / विश्व रेडियो दिवस",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "प्रणय दिवस",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "14"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "जया एकादशी",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "16"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पूर्णिमा",
+        "event": "प्रजातन्त्र दिवस / श्री स्वस्थानी व्रत समाप्ति",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "19"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "सामाजिक न्याय दिवस",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "20"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "अन्तर्राष्ट्रिय मातृभाषा दिवस",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "शिक्षा दिवस",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "विश्व गैरसरकारी संस्था दिवस",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "शून्य भेदभाव दिवस",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "विजया एकादशी",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "विश्व वन्यजन्तु दिवस",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "3"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "त्रयोदशी",
+        "event": "महा शिवरात्री / नेपाली सेना दिवस",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "4"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "--",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "औंसी",
+        "event": "--",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "6"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "प्रतिपदा",
+        "event": "ग्याल्पो ल्होसार",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "7"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "द्वितीया",
+        "event": "नारी दिवस",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "--",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "13"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "14"
+      }
+    ]
+  },
+  {
+    "month": 12,
+    "days": [
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "मीन संक्रान्ति / विश्व उपभोक्ता अधिकार दिवस",
+        "day": "१",
+        "dayInEn": "1",
+        "en": "15"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "--",
+        "day": "२",
+        "dayInEn": "2",
+        "en": "16"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "आमलकी एकादशी",
+        "day": "३",
+        "dayInEn": "3",
+        "en": "17"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "--",
+        "day": "४",
+        "dayInEn": "4",
+        "en": "18"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "५",
+        "dayInEn": "5",
+        "en": "19"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "चतुर्दशी",
+        "event":
+          "फागु पुर्णिमा (पहाडी जिल्ला बिदा) / विश्व मुख स्वास्थ्य दिवस / अन्तर्राष्ट्रिय खुशी दिवस",
+        "day": "६",
+        "dayInEn": "6",
+        "en": "20"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "पूर्णिमा",
+        "event":
+          "फागु पुर्णिमा (तराइ बिदा) / जातिय उत्पीडन विरुद्धको दिवस / विश्व कविता दिवस / विश्व डाउन सिन्ड्रोम दिवस",
+        "day": "७",
+        "dayInEn": "7",
+        "en": "21"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "विश्व पानी दिवस",
+        "day": "८",
+        "dayInEn": "8",
+        "en": "22"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "मच्छिन्द्रनाथ रथ यात्रा / विश्व मौसम दिवस",
+        "day": "९",
+        "dayInEn": "9",
+        "en": "23"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "विश्व क्षयरोग दिवस",
+        "day": "१०",
+        "dayInEn": "10",
+        "en": "24"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "११",
+        "dayInEn": "11",
+        "en": "25"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "१२",
+        "dayInEn": "12",
+        "en": "26"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "विश्व रङ्गमञ्च दिवस",
+        "day": "१३",
+        "dayInEn": "13",
+        "en": "27"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "--",
+        "day": "१४",
+        "dayInEn": "14",
+        "en": "28"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "नवमी",
+        "event": "--",
+        "day": "१५",
+        "dayInEn": "15",
+        "en": "29"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "दशमी",
+        "event": "विश्व नेवाः दिवस",
+        "day": "१६",
+        "dayInEn": "16",
+        "en": "30"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "--",
+        "day": "१७",
+        "dayInEn": "17",
+        "en": "31"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "एकादशी",
+        "event": "पापमोचिनी एकादशी / विश्व मूर्ख दिवस",
+        "day": "१८",
+        "dayInEn": "18",
+        "en": "1"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वादशी",
+        "event": "विश्व अटिजम जागरुकता दिवस",
+        "day": "१९",
+        "dayInEn": "19",
+        "en": "2"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "त्रयोदशी",
+        "event": "--",
+        "day": "२०",
+        "dayInEn": "20",
+        "en": "3"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्दशी",
+        "event": "पाहाँचःह्रे",
+        "day": "२१",
+        "dayInEn": "21",
+        "en": "4"
+      },
+      {
+        "isHoliday": true,
+        "tithi": "औंसी",
+        "event": "घोडे जात्रा (काठमाडौं बिदा)",
+        "day": "२२",
+        "dayInEn": "22",
+        "en": "5"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "प्रतिपदा",
+        "event": "अन्तर्राष्ट्रिय विकास र शान्तिको लागि खेलकुद दिवस",
+        "day": "२३",
+        "dayInEn": "23",
+        "en": "6"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "द्वितीया",
+        "event": "विश्व स्वास्थ्य दिवस",
+        "day": "२४",
+        "dayInEn": "24",
+        "en": "7"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "तृतिया",
+        "event": "--",
+        "day": "२५",
+        "dayInEn": "25",
+        "en": "8"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "चतुर्थी",
+        "event": "--",
+        "day": "२६",
+        "dayInEn": "26",
+        "en": "9"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "पञ्चमी",
+        "event": "--",
+        "day": "२७",
+        "dayInEn": "27",
+        "en": "10"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "षष्ठी",
+        "event": "--",
+        "day": "२८",
+        "dayInEn": "28",
+        "en": "11"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "सप्तमी",
+        "event": "अन्तर्राष्ट्रिय मानव अन्तरिक्ष विमान दिवस",
+        "day": "२९",
+        "dayInEn": "29",
+        "en": "12"
+      },
+      {
+        "isHoliday": false,
+        "tithi": "अष्टमी",
+        "event": "राम नवमी / चैते दशैँ",
+        "day": "३०",
+        "dayInEn": "30",
+        "en": "13"
+      }
+    ]
+  }
+]

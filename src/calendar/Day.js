@@ -82,6 +82,7 @@ class Day extends Component {
               }}
             >
               {day.ad.day}
+              विश्वकर्मा पूजा / कन्या संक्रान्ति / राष्ट्रिय चलचित्र दिवस
             </div>
           )}
       </Col>

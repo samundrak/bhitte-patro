@@ -12,7 +12,6 @@ class Month extends React.Component {
     this.state = {
       weeks: [],
       dayStyle: {},
-      totalDays: 30,
     };
     this.monthViewRef = React.createRef();
   }
@@ -28,7 +27,7 @@ class Month extends React.Component {
           .fill(true)
           .map((item, index) => {
             const ad = adbs.bs2ad(
-              `${cursor.year}/${cursor.month}/${index + 1}`,
+              `${cursor.year}/${cursor.month}/${index + 1}`
             );
 
             adYears.add(ad.year);
@@ -39,7 +38,7 @@ class Month extends React.Component {
               month: this.props.index,
               ad,
             };
-          }),
+          })
       );
     const weeks = chunk(days, 7);
     const lastWeek = weeks[weeks.length - 1];
@@ -48,7 +47,7 @@ class Month extends React.Component {
       lastWeek.push(
         ...Array(daysLeft)
           .fill(true)
-          .map((item, index) => ({ isDay: false })),
+          .map((item, index) => ({ isDay: false }))
       );
     }
     if (!this.props.singleView) {
@@ -56,7 +55,7 @@ class Month extends React.Component {
         weeks.push(
           Array(7)
             .fill(true)
-            .map((item, index) => ({ isDay: false })),
+            .map((item, index) => ({ isDay: false }))
         );
       }
     }
@@ -75,33 +74,41 @@ class Month extends React.Component {
   }
 
   render() {
+    const {
+      singleView,
+      flipAnimation,
+      name,
+      today,
+      cursor,
+      handleDayClick,
+      index: monthIndex,
+    } = this.props;
+    const { dayStyle, weeks } = this.state;
     return (
       <div ref={this.monthViewRef}>
         <Row
           style={this.getStyle()}
           className={`animated lessAnimation ${
-            this.props.singleView ? this.props.flipAnimation : ''
+            singleView ? flipAnimation : ''
           }`}
         >
-          {!this.props.singleView && (
+          {!singleView && (
             <Row>
               <Col span={8} />
-              <Col span={8}>
-                {this.props.name}
-              </Col>
+              <Col span={8}>{name}</Col>
               <Col span={8} />
             </Row>
           )}
-          <WeekHeader singleView={this.props.singleView} />
+          <WeekHeader singleView={singleView} />
           <Row>
-            {this.state.weeks.map((week, index) => (
+            {weeks.map((week, index) => (
               <Week
-                dayStyle={this.state.dayStyle}
-                month={this.props.index}
-                today={this.props.today}
-                cursor={this.props.cursor}
-                handleDayClick={this.props.handleDayClick}
-                singleView={this.props.singleView}
+                dayStyle={dayStyle}
+                month={monthIndex}
+                today={today}
+                cursor={cursor}
+                handleDayClick={handleDayClick}
+                singleView={singleView}
                 data={week}
                 count={index}
                 key={index}
@@ -116,7 +123,7 @@ class Month extends React.Component {
   componentDidMount() {
     const { weeks, adMonths, adYears } = this.createBeautifullWeeks(
       this.props.weekStart,
-      this.props.totalDays,
+      this.props.totalDays
     );
     if (this.props.singleView) {
       this.props.updateAdMonths(adYears, adMonths);
@@ -138,13 +145,20 @@ class Month extends React.Component {
 }
 
 Month.defaultProps = {
-  singleView: false,
   handleDayClick: () => null,
   updateAdMonths: () => null,
+  events: [],
 };
 Month.propTypes = {
+  events: PropTypes.arrayOf(
+    PropTypes.objectOf(
+      PropTypes.shape({
+        tithi: PropTypes.string.isRequired,
+      })
+    )
+  ),
   updateAdMonths: PropTypes.func,
-  flipAnimation: PropTypes.string,
+  flipAnimation: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
   today: PropTypes.shape({
     year: PropTypes.number.isRequired,

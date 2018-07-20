@@ -21,5 +21,5 @@ export default function (router) {
       };
     })
     .post('/change_cursor', calendarCursor.create)
-    .patch('/change_cursor', async () => ({}), calendarCursor.update);
+    .patch('/change_cursor', async () => ({}), calendarCursor.update, calendarCursor.fetchEvents);
 }

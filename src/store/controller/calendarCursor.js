@@ -1,4 +1,6 @@
+import localforage from 'localforage';
 import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from '../state';
+import { fetchYearEvents } from '../../api';
 
 export default {
   async create(req, res) {
@@ -11,7 +13,7 @@ export default {
     const { step, value, type } = req.body;
     const state = req.state.app;
     let { year, month, day } = state.cursor;
-    const calendarView = state.calendarView;
+    const { calendarView } = state;
     let flipAnimation = '';
     if (!step) {
       flipAnimation = 'fadeInDown';
@@ -73,6 +75,23 @@ export default {
     }
     const date = { year, month, day };
     res.json({ date, view: calendarView });
-    return { cursor: date, flipAnimation };
+    req.pendingState = { cursor: date, flipAnimation };
+  },
+  async fetchEvents(req, res) {
+    try {
+      const askingYear = req.pendingState.cursor.year;
+      const storageKey = `year_${askingYear}`;
+      let events = null;
+      const rawEvents = await localforage.getItem(storageKey);
+      events = JSON.parse(rawEvents);
+      if (!events) {
+        const response = await fetchYearEvents(req.pendingState.cursor.year);
+        events = response.data;
+        localforage.setItem(storageKey, JSON.stringify(events));
+      }
+      return { ...req.pendingState, yearEvents: events };
+    } catch (err) {
+      return req.pendingState;
+    }
   },
 };

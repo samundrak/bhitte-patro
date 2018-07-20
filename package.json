@@ -5,8 +5,10 @@
   "dependencies": {
     "ad-bs-converter": "^0.5.0",
     "antd": "^3.6.6",
+    "axios": "^0.18.0",
     "domex": "git+https://github.com/samundrak/domex.git",
     "domex-redux": "git+https://github.com/samundrak/domex-redux.git",
+    "localforage": "^1.7.2",
     "lodash.chunk": "^4.2.0",
     "lodash.throttle": "^4.1.1",
     "prop-types": "^15.6.2",

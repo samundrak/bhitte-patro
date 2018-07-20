@@ -22,7 +22,7 @@ class Calendar extends React.Component {
 
   renderCalendarView() {
     const view = this.props.app.calendarView;
-    const cursor = this.props.app.cursor;
+    const { cursor, yearEvents: events } = this.props.app;
     const monthIndex = cursor.month - 1;
     const value = data[cursor.year];
     switch (view) {
@@ -41,6 +41,7 @@ class Calendar extends React.Component {
         return (
           monthIndex > -1 && (
             <Month
+              events={events[monthIndex]}
               updateAdMonths={this.handleUpdateAdMonths()}
               flipAnimation={this.props.app.flipAnimation}
               today={this.props.app.today}
@@ -60,17 +61,11 @@ class Calendar extends React.Component {
   }
 
   render() {
-    return (
-      <div ref={this.monthViewRef}>
-        {this.renderCalendarView()}
-      </div>
-    );
+    return <div ref={this.monthViewRef}>{this.renderCalendarView()}</div>;
   }
 
   componentDidMount() {
-    const {
-      year, month, day, view,
-    } = this.props.match.params;
+    const { year, month, day, view } = this.props.match.params;
     const np = NepaliDate.today();
     domex.resource.post('/today', {
       data: {
@@ -95,7 +90,7 @@ class Calendar extends React.Component {
     });
   }
 }
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   app: state.app,
 });
 export default connect(mapStateToProps)(Calendar);

@@ -50,9 +50,10 @@ class Day extends Component {
           borderColor: '#e8e8e8',
           ...this.props.style,
           ...styles,
+          color: day.events && day.events.isHoliday && 'red',
         }}
         span={3}
-        className={`${!singleView && day.isDay ? 'daySingleView' : ''} 
+        className={`day ${!singleView && day.isDay ? 'daySingleView' : ''} 
         ${(isToday && 'today') || ''}
         ${this.isSelectedDay() && !isToday ? 'selection' : ''}
         fullWidth
@@ -71,6 +72,7 @@ class Day extends Component {
         >
           {replaceNumberWithAnka(day.number)}
         </span>
+
         {day.ad &&
           singleView && (
             <div
@@ -81,7 +83,23 @@ class Day extends Component {
                 color: isToday && 'white',
               }}
             >
-              {day.ad.day}
+              <b style={{ padding: '10px' }}>{day.ad.day}</b>
+              <span>{day.events && day.events.tithi}</span>
+            </div>
+          )}
+
+        {day.ad &&
+          singleView && (
+            <div
+              style={{
+                fontSize: '0.8em',
+                margin: '0',
+                color: isToday && 'white',
+                position: 'absolute',
+                bottom: '0%',
+              }}
+            >
+              {day.events && day.events.event}
             </div>
           )}
       </Col>

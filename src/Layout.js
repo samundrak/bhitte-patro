@@ -2,13 +2,15 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import renderIf from 'render-if';
 import throttle from 'lodash.throttle';
-import { Layout, Select, Row, Col, Button } from 'antd';
+import {
+  Layout, Select, Row, Col, Button,
+} from 'antd';
 import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from './store/state';
 import { replaceNumberWithAnka } from './utils';
 import NepaliDate from './core/NepaliDate';
 import calendar from './data/calendar';
 
-const Option = Select.Option;
+const {Option} = Select;
 
 const { Header, Content } = Layout;
 const years = [];
@@ -53,9 +55,7 @@ class SimpleLayout extends React.Component {
       })
       .then(({ data }) => {
         const { date, view } = data;
-        const route = `/calendar/view/${view}/${date.year}/${date.month}/${
-          date.day
-        }`;
+        const route = `/calendar/view/${view}/${date.year}/${date.month}/${date.day}`;
         this.props.history.push(route);
       });
   }
@@ -78,7 +78,7 @@ class SimpleLayout extends React.Component {
         showSearch
         onChange={this.handleChangeYearCursor()}
       >
-        {years.map((item) => (
+        {years.map(item => (
           <Option value={item.yr} key={item.yr}>
             {item.local}
           </Option>
@@ -158,32 +158,28 @@ class SimpleLayout extends React.Component {
               <Col span={1} />
               <Col span={1} />
               <Col span={12}>
-                <Button onClick={this.handleGotoToday()}>आज</Button>
+                <Button onClick={this.handleGotoToday()}>
+आज
+                </Button>
                 &nbsp;{' '}
-                <Button
-                  shape="circle"
-                  onClick={this.handleChangeYearCursor('-')}
-                >
+                <Button shape="circle" onClick={this.handleChangeYearCursor('-')}>
                   &lt;
                 </Button>
                 &nbsp;
-                <Button
-                  shape="circle"
-                  onClick={this.handleChangeYearCursor('+')}
-                >
+                <Button shape="circle" onClick={this.handleChangeYearCursor('+')}>
                   &gt;
                 </Button>
                 &nbsp;
                 {this.renderYearChooser()}
                 {renderIf(
-                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
-                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
+                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value
+                    && calendarView !== CALENDAR_VIEW_TYPE.YEAR.value,
                 )(this.renderMonthChooser())}
               </Col>
               <Col span={5}>
                 {renderIf(
-                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value &&
-                    calendarView !== CALENDAR_VIEW_TYPE.YEAR.value
+                  calendarView === CALENDAR_VIEW_TYPE.MONTH.value
+                    && calendarView !== CALENDAR_VIEW_TYPE.YEAR.value,
                 )(this.renderGregorianMonths())}
               </Col>
               <Col span={3}>
@@ -192,7 +188,7 @@ class SimpleLayout extends React.Component {
                   style={{ width: 120 }}
                   onChange={this.handleChangeCalendarView()}
                 >
-                  {Object.keys(CALENDAR_VIEW_TYPE).map((item) => (
+                  {Object.keys(CALENDAR_VIEW_TYPE).map(item => (
                     <Option
                       value={CALENDAR_VIEW_TYPE[item].value}
                       key={CALENDAR_VIEW_TYPE[item].value}
@@ -231,6 +227,7 @@ class SimpleLayout extends React.Component {
       this.handleChangeMonthCursor('+')(event);
     }
   }
+
   handleKeyDown(event) {
     switch (event.key) {
       case 'ArrowLeft':
@@ -244,11 +241,9 @@ class SimpleLayout extends React.Component {
         break;
     }
   }
+
   componentDidMount() {
-    document.body.addEventListener(
-      'mousewheel',
-      throttle(this.handleMouseWheel.bind(this), 300)
-    );
+    document.body.addEventListener('mousewheel', throttle(this.handleMouseWheel.bind(this), 300));
     document.body.addEventListener('keyup', this.handleKeyDown.bind(this));
   }
 }

@@ -19,7 +19,7 @@ class Week extends Component {
     }
     return (
       <Row style={{}}>
-        {week.np[this.props.short ? 'short' : 'long'].map(weekDay => (
+        {week.np[this.props.short ? 'short' : 'long'].map((weekDay, index) => (
           <Col
             key={weekDay}
             span={3}
@@ -32,6 +32,7 @@ class Week extends Component {
               borderColor: '#e8e8e8',
               lineHeight: '25px',
               ...styles,
+              color: index === 6 && 'red',
             }}
             className="fullWidth"
           >

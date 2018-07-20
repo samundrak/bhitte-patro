@@ -24,4 +24,5 @@ export default {
     day: 0,
   },
   calendarView: CALENDAR_VIEW_TYPE.MONTH.value,
+  yearEvents: [],
 };

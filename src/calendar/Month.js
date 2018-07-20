@@ -17,7 +17,7 @@ class Month extends React.Component {
   }
 
   createBeautifullWeeks(weekStart, totalDays) {
-    const cursor = this.props.cursor;
+    const { cursor, events } = this.props;
     const adMonths = new Set();
     const adYears = new Set();
     const days = Array(weekStart)
@@ -32,11 +32,13 @@ class Month extends React.Component {
 
             adYears.add(ad.year);
             adMonths.add(ad.strMonth);
+
             return {
               isDay: true,
               number: index + 1,
               month: this.props.index,
               ad,
+              events: events.days[index],
             };
           })
       );
@@ -88,7 +90,7 @@ class Month extends React.Component {
       <div ref={this.monthViewRef}>
         <Row
           style={this.getStyle()}
-          className={`animated lessAnimation ${
+          className={`animated lessAnimation calendar ${
             singleView ? flipAnimation : ''
           }`}
         >
@@ -147,16 +149,12 @@ class Month extends React.Component {
 Month.defaultProps = {
   handleDayClick: () => null,
   updateAdMonths: () => null,
-  events: [],
+  events: {
+    days: [],
+  },
 };
 Month.propTypes = {
-  events: PropTypes.arrayOf(
-    PropTypes.objectOf(
-      PropTypes.shape({
-        tithi: PropTypes.string.isRequired,
-      })
-    )
-  ),
+  events: PropTypes.object,
   updateAdMonths: PropTypes.func,
   flipAnimation: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,

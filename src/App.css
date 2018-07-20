@@ -3526,3 +3526,7 @@ body {
 .fullWidth{
   width: calc(100% / 7) !important;
 }
+
+.week .day:last-child {
+  color: #d10b15!important;
+}

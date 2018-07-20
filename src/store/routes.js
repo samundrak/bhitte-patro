@@ -1,6 +1,6 @@
 import calendarCursor from './controller/calendarCursor';
 
-export default function (router) {
+export default function(router) {
   return router
     .post('/change_year_cursor', async (req, res) => {
       res.json({});
@@ -20,6 +20,11 @@ export default function (router) {
         gregorianOfCursor: req.body,
       };
     })
-    .post('/change_cursor', calendarCursor.create)
-    .patch('/change_cursor', async () => ({}), calendarCursor.update, calendarCursor.fetchEvents);
+    .post('/change_cursor', calendarCursor.create, calendarCursor.fetchEvents)
+    .patch(
+      '/change_cursor',
+      async () => ({}),
+      calendarCursor.update,
+      calendarCursor.fetchEvents
+    );
 }

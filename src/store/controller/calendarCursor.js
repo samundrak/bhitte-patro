@@ -7,7 +7,7 @@ export default {
     const date = { ...req.body.date };
     date.year = parseInt(date.year, 10);
     res.json({});
-    return { cursor: date };
+    req.pendingState = { cursor: date };
   },
   async update(req, res) {
     const { step, value, type } = req.body;
@@ -91,7 +91,7 @@ export default {
       }
       return { ...req.pendingState, yearEvents: events };
     } catch (err) {
-      return req.pendingState;
+      return { ...req.pendingState, yearEvents: [] };
     }
   },
 };

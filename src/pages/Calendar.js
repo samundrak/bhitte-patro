@@ -41,7 +41,7 @@ class Calendar extends React.Component {
         return (
           monthIndex > -1 && (
             <Month
-              events={events}
+              events={events[monthIndex]}
               updateAdMonths={this.handleUpdateAdMonths()}
               flipAnimation={this.props.app.flipAnimation}
               today={this.props.app.today}

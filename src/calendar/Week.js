@@ -8,7 +8,7 @@ class Week extends Component {
 
   render() {
     return (
-      <Row style={{}}>
+      <Row style={{}} className="week">
         {this.props.data.map((day, index) => (
           <Day
             style={this.props.dayStyle}

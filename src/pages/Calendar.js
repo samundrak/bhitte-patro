@@ -5,7 +5,7 @@ import data from '../data/years.json';
 import { CALENDAR_VIEW_TYPE } from '../store/state';
 import domex from '../store';
 import calendar from '../data/calendar';
-import Month from '../calendar/Month';
+import Month from '../components/month';
 import NepaliDate from '../core/NepaliDate';
 
 class Calendar extends React.Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
 import { Row, Col } from 'antd';
-import calendar from '../data/calendar';
+import calendar from '../../data/calendar';
 
 const { week } = calendar;
 class Week extends Component {

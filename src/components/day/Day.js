@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Col } from 'antd';
 import PropTypes from 'prop-types';
-import { replaceNumberWithAnka } from '../utils';
+import { replaceNumberWithAnka } from '../../utils';
+import { TithiAndAd, StyledAnka, DayStyle, StyledEvent } from './style';
 
 class Day extends Component {
   isCursorDayToday() {
@@ -23,35 +23,14 @@ class Day extends Component {
   }
 
   render() {
-    const styles = {};
     const isToday = this.isCursorDayToday();
     const { day, singleView } = this.props;
-    if (this.props.singleView) {
-      Object.assign(styles, {
-        padding: '10px',
-        borderBottom: singleView && '#e0e0e0 1px solid',
-        borderRight: '#e0e0e0 1px solid',
-      });
-    } else {
-      Object.assign(styles, {
-        height: '25px',
-      });
-    }
+
     return (
-      <Col
-        style={{
-          borderWidth: '0px',
-          height: '25px',
-          margin: '0px',
-          cursor: 'pointer',
-          textAlign: 'center',
-          borderStyle: 'solid',
-          lineHeight: '25px',
-          borderColor: '#e8e8e8',
-          ...this.props.style,
-          ...styles,
-          color: day.events && day.events.isHoliday && 'red',
-        }}
+      <DayStyle
+        singleView={this.props.singleView}
+        height={this.props.style.height}
+        day={day}
         span={3}
         className={`day ${!singleView && day.isDay ? 'daySingleView' : ''} 
         ${(isToday && 'today') || ''}
@@ -60,49 +39,25 @@ class Day extends Component {
         `}
         onClick={this.props.handleDayClick(day)}
       >
-        <span
-          style={{
-            fontWeight: '400',
-            fontSize: (singleView && '3vw') || '1vw',
-            // float: this.props.singleView && 'left',
-            paddingTop: this.props.singleView && '20%',
-            position: singleView ? 'absolute' : '',
-            color: isToday && 'white',
-          }}
-        >
+        <StyledAnka singleView={this.props.singleView} isToday={isToday}>
           {replaceNumberWithAnka(day.number)}
-        </span>
+        </StyledAnka>
 
         {day.ad &&
           singleView && (
-            <div
-              style={{
-                fontWeight: '400',
-                margin: '0',
-                float: this.props.singleView && 'left',
-                color: isToday && 'white',
-              }}
-            >
+            <TithiAndAd singleView={this.props.singleView} isToday={isToday}>
               <b style={{ padding: '10px' }}>{day.ad.day}</b>
               <span>{day.events && day.events.tithi}</span>
-            </div>
+            </TithiAndAd>
           )}
 
         {day.ad &&
           singleView && (
-            <div
-              style={{
-                fontSize: '0.8em',
-                margin: '0',
-                color: isToday && 'white',
-                position: 'absolute',
-                bottom: '0%',
-              }}
-            >
+            <StyledEvent isToday={isToday}>
               {day.events && day.events.event}
-            </div>
+            </StyledEvent>
           )}
-      </Col>
+      </DayStyle>
     );
   }
 }

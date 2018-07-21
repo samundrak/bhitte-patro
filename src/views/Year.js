@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { Row, Col } from 'antd';
 import calendar from '../data/calendar';
-import Month from '../calendar/Month';
+import Month from '../components/month';
 import domex from '../store';
 
 class Year extends React.Component {
@@ -15,7 +15,7 @@ class Year extends React.Component {
   }
 
   handleDayClick(month) {
-    return day => () => {
+    return (day) => () => {
       domex.resource
         .patch('/change_cursor', {
           data: {

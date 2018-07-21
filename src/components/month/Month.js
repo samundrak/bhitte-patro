@@ -3,8 +3,8 @@ import chunk from 'lodash.chunk';
 import PropTypes from 'prop-types';
 import adbs from 'ad-bs-converter';
 import { Row, Col } from 'antd';
-import WeekHeader from './WeekHeader';
-import Week from './Week';
+import WeekHeader from '../weekHeader';
+import Week from '../week';
 
 class Month extends React.Component {
   constructor(props) {
@@ -152,11 +152,12 @@ Month.defaultProps = {
   events: {
     days: [],
   },
+  flipAnimation: '',
 };
 Month.propTypes = {
   events: PropTypes.object,
   updateAdMonths: PropTypes.func,
-  flipAnimation: PropTypes.string.isRequired,
+  flipAnimation: PropTypes.string,
   index: PropTypes.number.isRequired,
   today: PropTypes.shape({
     year: PropTypes.number.isRequired,

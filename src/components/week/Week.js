@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'antd';
 import PropTypes from 'prop-types';
-import Day from './Day';
+import Day from '../day';
 
 class Week extends Component {
   static DAYS_COUNT = Array(7).fill(true);

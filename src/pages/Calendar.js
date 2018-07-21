@@ -1,14 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import YearView from '../views/Year';
+import YearView from '../components/Year';
 import data from '../data/years.json';
 import { CALENDAR_VIEW_TYPE } from '../store/state';
 import domex from '../store';
 import calendar from '../data/calendar';
 import Month from '../components/month';
 import NepaliDate from '../core/NepaliDate';
+import SimpleDrawer from '../components/drawer';
 
 class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      day: null,
+    };
+    this.handleDrawerClose = this.handleDrawerClose.bind(this);
+  }
   handleUpdateAdMonths() {
     return (adYears, adMonths) => {
       domex.resource.post('/update_gregorian_months_local_months', {
@@ -19,7 +27,29 @@ class Calendar extends React.Component {
       });
     };
   }
-
+  handleDrawerClose() {
+    this.setState({
+      day: null,
+    });
+    domex.resource.post('/drawer', {
+      data: {
+        status: false,
+      },
+    });
+  }
+  handleDayClick(monthIndex) {
+    return (day) => () => {
+      if (!day.isDay) return;
+      this.setState({
+        day,
+      });
+      domex.resource.post('/drawer', {
+        data: {
+          status: true,
+        },
+      });
+    };
+  }
   renderCalendarView() {
     const view = this.props.app.calendarView;
     const { cursor, yearEvents: events } = this.props.app;
@@ -41,6 +71,7 @@ class Calendar extends React.Component {
         return (
           monthIndex > -1 && (
             <Month
+              handleDayClick={this.handleDayClick(monthIndex)}
               events={events[monthIndex]}
               updateAdMonths={this.handleUpdateAdMonths()}
               flipAnimation={this.props.app.flipAnimation}
@@ -61,7 +92,20 @@ class Calendar extends React.Component {
   }
 
   render() {
-    return <div ref={this.monthViewRef}>{this.renderCalendarView()}</div>;
+    return (
+      <div ref={this.monthViewRef}>
+        {this.renderCalendarView()}
+        {this.state.day && (
+          <SimpleDrawer
+            day={this.state.day}
+            cursor={this.props.app.cursor}
+            today={this.props.app.today}
+            onClose={this.handleDrawerClose}
+            visible={this.props.app.isDrawerOpen}
+          />
+        )}
+      </div>
+    );
   }
 
   componentDidMount() {

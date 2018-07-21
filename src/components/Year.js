@@ -46,6 +46,7 @@ class Year extends React.Component {
         {Year.MONTHS.long.map((name, index) => (
           <Col span={8} key={name}>
             <Month
+              singleView={false}
               index={index}
               handleDayClick={this.handleDayClick(index)}
               cursor={this.props.cursor}

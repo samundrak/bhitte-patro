@@ -78,19 +78,30 @@ export default {
     req.pendingState = { cursor: date, flipAnimation };
   },
   async fetchEvents(req, res) {
+    const askingYear = req.pendingState.cursor.year;
     try {
-      const askingYear = req.pendingState.cursor.year;
       const storageKey = `year_${askingYear}`;
       let events = null;
-      const rawEvents = await localforage.getItem(storageKey);
-      events = JSON.parse(rawEvents);
-      if (!events) {
-        const response = await fetchYearEvents(req.pendingState.cursor.year);
-        events = response.data;
-        localforage.setItem(storageKey, JSON.stringify(events));
+      //First search in memory if not then goto localDB
+      if (window.bhittePatroEvents[askingYear] === undefined) {
+        const rawEvents = await localforage.getItem(storageKey);
+        events = JSON.parse(rawEvents);
+        // If not found in localDB then goto remote
+        if (!events) {
+          const response = await fetchYearEvents(req.pendingState.cursor.year);
+          events = response.data;
+          localforage.setItem(storageKey, JSON.stringify(events));
+        }
+        window.bhittePatroEvents[askingYear] = events;
+        return { ...req.pendingState, yearEvents: events };
       }
+      events =
+        window.bhittePatroEvents[askingYear] === null
+          ? []
+          : window.bhittePatroEvents[askingYear];
       return { ...req.pendingState, yearEvents: events };
     } catch (err) {
+      window.bhittePatroEvents[askingYear] = null; // this means we have searched in remote and didnt found
       return { ...req.pendingState, yearEvents: [] };
     }
   },

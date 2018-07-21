@@ -26,5 +26,9 @@ export default function(router) {
       async () => ({}),
       calendarCursor.update,
       calendarCursor.fetchEvents
-    );
+    )
+    .post('/drawer', async (req, res) => {
+      res.json({});
+      return { isDrawerOpen: req.body.status };
+    });
 }

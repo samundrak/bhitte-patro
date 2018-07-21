@@ -126,9 +126,9 @@ class SimpleLayout extends React.Component {
       return (
         <div>
           <b>
-            {months.toString().replace(',', '/')}
+            {months.toString().replace(',', '-')}
             &nbsp;
-            {years.toString().replace(',', '/')}
+            {years.toString().replace(',', '-')}
           </b>
         </div>
       );
@@ -222,6 +222,7 @@ class SimpleLayout extends React.Component {
   }
 
   handleMouseWheel(event) {
+    if (this.props.app.isDrawerOpen) return;
     if (this.props.app.calendarView !== CALENDAR_VIEW_TYPE.MONTH.value) {
       return;
     }

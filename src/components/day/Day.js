@@ -31,11 +31,11 @@ class Day extends Component {
         singleView={this.props.singleView}
         height={this.props.style.height}
         day={day}
-        span={3}
+        span={this.props.span}
         className={`day ${!singleView && day.isDay ? 'daySingleView' : ''} 
         ${(isToday && 'today') || ''}
         ${this.isSelectedDay() && !isToday ? 'selection' : ''}
-        fullWidth
+        ${!this.props.solo && 'fullWidth'}
         `}
         onClick={this.props.handleDayClick(day)}
       >
@@ -66,6 +66,9 @@ Day.defaultProps = {
   day: {},
   singleView: false,
   style: {},
+  handleDayClick: () => null,
+  span: 3,
+  solo: false,
 };
 Day.propTypes = {
   style: PropTypes.object,
@@ -75,7 +78,7 @@ Day.propTypes = {
     month: PropTypes.number.isRequired,
     day: PropTypes.number.isRequired,
   }).isRequired,
-  handleDayClick: PropTypes.func.isRequired,
+  handleDayClick: PropTypes.func,
   singleView: PropTypes.bool.isRequired,
   day: PropTypes.object.isRequired,
   cursor: PropTypes.shape({
@@ -83,5 +86,7 @@ Day.propTypes = {
     month: PropTypes.number.isRequired,
     day: PropTypes.number.isRequired,
   }).isRequired,
+  span: PropTypes.number,
+  solo: PropTypes.bool,
 };
 export default Day;

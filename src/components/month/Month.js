@@ -32,8 +32,9 @@ class Month extends React.Component {
 
             adYears.add(ad.year);
             adMonths.add(ad.strMonth);
-
+            const bs = adbs.ad2bs(`${ad.year}/${ad.month}/${ad.day}`);
             return {
+              bs,
               isDay: true,
               number: index + 1,
               month: this.props.index,

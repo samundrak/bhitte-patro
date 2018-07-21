@@ -3,11 +3,10 @@ import { replaceNumberWithAnka } from '../../utils';
 import { StyledSolo, StyledAnka, StyledEvent, TithiAndAd } from './style';
 
 const Solo = ({ day, span, height }) => {
-  console.log(day);
   const { bs } = day;
   return (
     <StyledSolo
-      isHoliday={day.events.isHoliday}
+      isHoliday={day.events && day.events.isHoliday}
       height={height}
       day={day}
       span={span}

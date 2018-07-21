@@ -13,9 +13,14 @@ ReactDOM.render(
       <App domex={domex} />
     </BrowserRouter>
   </Provider>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
 
+Object.defineProperty(window, 'bhittePatroEvents', {
+  enumerable: false,
+  configurable: false,
+  value: {},
+});
 registerServiceWorker();
 if (module.hot) {
   module.hot.accept();

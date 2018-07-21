@@ -40,9 +40,9 @@ export const StyledEvent = styled.div`
   position: absolute;
   bottom: 0%;
 `;
-export const StyledSolo = styled(({ height, day, singleView, ...rest }) => (
-  <Col {...rest} />
-))`
+export const StyledSolo = styled(
+  ({ isHoliday, height, day, singleView, ...rest }) => <Col {...rest} />
+)`
   color: #fff;
   border-width: 0px;
   height: ${({ height }) => height};

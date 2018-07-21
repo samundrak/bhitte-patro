@@ -14,7 +14,9 @@ class SimpleDrawer extends React.Component {
     return `https://www.google.com/search?q=${item}`;
   }
   render() {
-    const events = this.breakInEvents(this.props.day.events.event);
+    const events = this.props.day.events
+      ? this.breakInEvents(this.props.day.events.event)
+      : [];
     return (
       <Drawer
         closable={true}

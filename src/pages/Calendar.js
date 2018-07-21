@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import YearView from '../views/Year';
+import YearView from '../components/Year';
 import data from '../data/years.json';
 import { CALENDAR_VIEW_TYPE } from '../store/state';
 import domex from '../store';

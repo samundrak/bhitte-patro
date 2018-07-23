@@ -10,7 +10,7 @@ export default {
     months: [],
     years: [],
   },
-  isDrawerOpen: !false,
+  isDrawerOpen: false,
   flipAnimation: '',
   currentYear: 2075,
   cursorYear: 2075,

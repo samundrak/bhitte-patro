@@ -44,7 +44,7 @@ class Year extends React.Component {
     return (
       <Row>
         {Year.MONTHS.long.map((name, index) => (
-          <Col span={6} key={name}>
+          <Col xxl={6} md={12} xs={24} key={name}>
             <Month
               singleView={false}
               index={index}

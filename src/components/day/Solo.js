@@ -48,7 +48,6 @@ const Solo = ({ day, span, height }) => {
           paddingRight: '3%',
           right: '0%',
           paddingBottom: '2%',
-          fontSize: '1vw',
         }}
       >
         {bs.ne.strMonth}&#160;{bs.ne.year}&#160;{bs.ne.strDayOfWeek}

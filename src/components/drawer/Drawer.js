@@ -20,7 +20,7 @@ class SimpleDrawer extends React.Component {
     return (
       <Drawer
         closable={true}
-        width={400}
+        width={300}
         placement="right"
         closable={false}
         onClose={this.props.onClose}

@@ -2,22 +2,23 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import renderIf from 'render-if';
 import throttle from 'lodash.throttle';
-import { Layout, Select, Row, Col, Button } from 'antd';
+import { Icon, Menu, Layout, Select, Row, Col, Button } from 'antd';
 import { CALENDAR_VIEW_TYPE, YEAR_RANGE_NEPALI } from './store/state';
 import { replaceNumberWithAnka } from './utils';
 import NepaliDate from './core/NepaliDate';
 import calendar from './data/calendar';
+import PatroSider from './components/sider';
 
 const { Option } = Select;
 
-const { Header, Content } = Layout;
+const { Header, Content, Sider } = Layout;
 const years = [];
 for (let yr = YEAR_RANGE_NEPALI[0]; yr < YEAR_RANGE_NEPALI[1]; yr++) {
   years.push({ yr, local: replaceNumberWithAnka(yr) });
 }
 class SimpleLayout extends React.Component {
   state = {
-    collapsed: false,
+    collapsed: true,
   };
 
   toggle = () => {
@@ -147,15 +148,36 @@ class SimpleLayout extends React.Component {
       </div>
     );
   }
-
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  };
   render() {
     const calendarView = this.props.app.calendarView;
     return (
       <Layout theme="light" position="fixed">
+        <Sider
+          width={300}
+          collapsedWidth={0}
+          theme="light"
+          trigger={null}
+          collapsible
+          collapsed={this.state.collapsed}
+        >
+          <PatroSider app={this.props.app} />
+        </Sider>{' '}
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }}>
             <Row type="flex" justify="space-between">
-              <Col span={1} />
+              <Col span={1}>
+                {' '}
+                <Icon
+                  className="trigger"
+                  type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+                  onClick={this.toggle}
+                />
+              </Col>
               <Col span={1} />
               <Col span={12}>
                 <Button onClick={this.handleGotoToday()}>आज</Button>
@@ -222,7 +244,13 @@ class SimpleLayout extends React.Component {
   }
 
   handleMouseWheel(event) {
-    if (this.props.app.isDrawerOpen) return;
+    if (
+      this._importantEventContainer &&
+      this._importantEventContainer.contains(event.target)
+    ) {
+      return;
+    }
+    if (document.getEl) if (this.props.app.isDrawerOpen) return;
     if (this.props.app.calendarView !== CALENDAR_VIEW_TYPE.MONTH.value) {
       return;
     }
@@ -248,6 +276,9 @@ class SimpleLayout extends React.Component {
   }
 
   componentDidMount() {
+    this._importantEventContainer = document.getElementById(
+      'importantEventContainer'
+    );
     document.body.addEventListener(
       'mousewheel',
       throttle(this.handleMouseWheel.bind(this), 300)

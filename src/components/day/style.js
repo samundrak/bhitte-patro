@@ -22,7 +22,7 @@ export const DayStyle = styled(({ height, day, singleView, ...rest }) => (
 export const StyledAnka = styled.span`
   font-weight: 400;
   font-size: ${(props) =>
-    (props.singleView && (props.fontSize || '3vw')) || '1vw'};
+    (props.singleView && (props.fontSize || '3vw')) || ' '};
   padding-top: ${(props) => props.singleView && '20%'};
   position: ${(props) => (props.singleView ? 'absolute' : '')};
   color: ${(props) => props.isToday && 'white'};

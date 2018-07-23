@@ -32,10 +32,11 @@ class Day extends Component {
         height={this.props.style.height}
         day={day}
         span={this.props.span}
-        className={`day ${!singleView && day.isDay ? 'daySingleView' : ''} 
+        className={`day fullWidth ${
+          !singleView && day.isDay ? 'daySingleView' : ''
+        } 
         ${(isToday && 'today') || ''}
         ${this.isSelectedDay() && !isToday ? 'selection' : ''}
-        ${this.props.singleView && 'fullWidth'}
         `}
         onClick={this.props.handleDayClick(day)}
       >

@@ -80,6 +80,9 @@ export default {
   async fetchEvents(req, res) {
     const askingYear = req.pendingState.cursor.year;
     try {
+      if (req.state.app.calendarView === CALENDAR_VIEW_TYPE.YEAR.value) {
+        return req.pendingState;
+      }
       const storageKey = `year_${askingYear}`;
       let events = null;
       //First search in memory if not then goto localDB

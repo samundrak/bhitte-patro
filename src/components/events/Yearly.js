@@ -17,7 +17,15 @@ class Yearly extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!this.state.scrolled && nextProps.events.length) {
+    if (
+      !this.state.scrolled &&
+      nextProps.events.length &&
+      this.cursorMonth.current
+    ) {
+      this.cursorMonth.current.scrollIntoView();
+      this.setState({
+        scrolled: true,
+      });
     }
   }
   handleOpenPanel = (monthIndex) => {
@@ -38,19 +46,22 @@ class Yearly extends React.Component {
         {events.map((item, monthIndex) => {
           return (
             <Panel
-              ref={monthIndex === currentMonth ? this.cursorMonth : null}
               header={calendar.month.np.long[monthIndex]}
               key={monthIndex}
               onClick={this.handleOpenPanel(monthIndex)}
             >
               {this.state.openedPanels.includes(monthIndex) ? (
-                <MonthlyEvents
-                  bordered={false}
-                  isHeader={false}
-                  key={monthIndex}
-                  name={calendar.month.np.long[monthIndex]}
-                  events={(item || {}).days || []}
-                />
+                <div
+                  ref={monthIndex === currentMonth ? this.cursorMonth : null}
+                >
+                  <MonthlyEvents
+                    bordered={false}
+                    isHeader={false}
+                    key={monthIndex}
+                    name={calendar.month.np.long[monthIndex]}
+                    events={(item || {}).days || []}
+                  />
+                </div>
               ) : (
                 <div />
               )}

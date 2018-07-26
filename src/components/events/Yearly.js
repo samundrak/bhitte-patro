@@ -38,11 +38,7 @@ class Yearly extends React.Component {
     const { cursor, events } = this.props;
     const currentMonth = cursor.month - 1;
     return (
-      <Collapse
-        bordered={false}
-        defaultActiveKey={['0']}
-        activeKey={[String(currentMonth)]}
-      >
+      <Collapse bordered={false} activeKey={[String(currentMonth)]}>
         {events.map((item, monthIndex) => {
           return (
             <Panel

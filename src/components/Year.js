@@ -41,10 +41,13 @@ class Year extends React.Component {
   }
 
   render() {
+    const { cursor, events } = this.props;
+    const currentMonth = cursor.month - 1;
     return (
       <Row>
         {Year.MONTHS.long.map((name, index) => (
           <Col xxl={6} md={12} xs={24} key={name}>
+            {}
             <Month
               singleView={false}
               index={index}
@@ -60,6 +63,7 @@ class Year extends React.Component {
       </Row>
     );
   }
+  componentDidMount() {}
 }
 
 Year.propTypes = {

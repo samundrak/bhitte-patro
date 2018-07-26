@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Monthly as MonthlyEvents } from '../events';
+import { Monthly as MonthlyEvents, Yearly as YearlyEvents } from '../events';
 import { Row, Col } from 'antd';
 import calendar from '../../data/calendar';
+
 class Sider extends React.Component {
   state = {};
   render() {
@@ -25,7 +26,9 @@ class Sider extends React.Component {
                 events={(events[monthIndex] || {}).days || []}
               />
             )}
-            {calendarView === 'year' && 'uplabda chaina'}
+            {calendarView === 'year' && (
+              <YearlyEvents events={events} cursor={cursor} />
+            )}
           </Col>
         </Row>
       </div>

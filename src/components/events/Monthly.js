@@ -27,12 +27,13 @@ class Monthly extends React.Component {
     return (
       <List
         header={
-          <div>
-            {' '}
-            <b>{this.props.name}</b> महिनाको महत्वपूर्ण दिनहरु{' '}
-          </div>
+          this.props.isHeader ? (
+            <div>
+              <b>{this.props.name}</b> महिनाको महत्वपूर्ण दिनहरु{' '}
+            </div>
+          ) : null
         }
-        bordered
+        bordered={this.props.bordered}
       >
         <List.Item>
           <RadioGroup
@@ -76,8 +77,13 @@ class Monthly extends React.Component {
     );
   }
 }
-
+Monthly.defaultProps = {
+  isHeader: true,
+  bordered: true,
+};
 Monthly.propTypes = {
+  bordered: PropTypes.bool,
   events: PropTypes.array.isRequired,
+  isHeader: PropTypes.bool,
 };
 export default Monthly;

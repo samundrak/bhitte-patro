@@ -22,17 +22,22 @@ class Yearly extends React.Component {
       nextProps.events.length &&
       this.cursorMonth.current
     ) {
+      const { cursor } = this.props;
+      const currentMonth = cursor.month - 1;
       this.cursorMonth.current.scrollIntoView();
       this.setState({
         scrolled: true,
+        openedPanels: [currentMonth],
       });
     }
   }
   handleOpenPanel = (monthIndex) => {
-    if (this.state.openedPanels.includes(monthIndex)) return;
-    this.setState((state) => ({
-      openedPanels: [...state.openedPanels, monthIndex],
-    }));
+    return () => {
+      if (this.state.openedPanels.includes(monthIndex)) return;
+      this.setState((state) => ({
+        openedPanels: [...state.openedPanels, monthIndex],
+      }));
+    };
   };
   render() {
     const { cursor, events } = this.props;

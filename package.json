@@ -5,7 +5,7 @@
   "dependencies": {
     "ad-bs-converter": "^0.5.0",
     "antd": "^3.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "domex": "git+https://github.com/samundrak/domex.git",
     "domex-redux": "git+https://github.com/samundrak/domex-redux.git",
     "localforage": "^1.7.2",

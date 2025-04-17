@@ -23,11 +23,11 @@
     "styled-components": "^3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "lint": "eslint src/",
-    "eject": "react-scripts eject"
+    "start": "CI=false && react-scripts start",
+    "build": "CI=false && react-scripts build",
+    "test": "CI=false &&  react-scripts test --env=jsdom",
+    "lint": "CI=false && eslint src/",
+    "eject": "CI=false &&  react-scripts eject"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
